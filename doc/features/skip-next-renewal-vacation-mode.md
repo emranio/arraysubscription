@@ -3,6 +3,8 @@
 ## Overview
 Allow customers (and admins) to skip the next renewal cycle without cancelling the subscription. This is separate from pause: the subscription stays active, but billing and fulfillment are skipped for one cycle.
 
+**WooCommerce Integration:** Skipping a renewal prevents the scheduled WooCommerce renewal order from being created for that specific cycle. The subscription remains active and the next order will be generated in the following cycle.
+
 ---
 
 ## User Stories

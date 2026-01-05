@@ -3,6 +3,8 @@
 ## Overview
 Allow subscriptions to be purchased as gifts and transferred between users. This supports gifting memberships, subscriptions for family/friends, and admin-assisted ownership changes.
 
+**WooCommerce Integration:** Gift purchases use WooCommerce's standard checkout and order system. The initial purchase creates a WooCommerce order for the purchaser, and when claimed, the subscription (along with future renewal orders) is associated with the recipient's WooCommerce customer account.
+
 ---
 
 ## User Stories

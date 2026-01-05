@@ -3,6 +3,8 @@
 ## Overview
 Synchronize all subscription renewal dates to specific days (e.g., 1st of month, every Monday) for easier billing management, cash flow prediction, and operational efficiency.
 
+**WooCommerce Integration:** Synchronized renewals ensure all WooCommerce renewal orders are created on the same day, making batch processing, reporting, and fulfillment more efficient. Proration charges are handled through standard WooCommerce orders.
+
 ---
 
 ## User Stories

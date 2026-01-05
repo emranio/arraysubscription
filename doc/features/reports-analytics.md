@@ -1,7 +1,9 @@
 # Reports & Analytics Dashboard
 
 ## Overview
-Comprehensive subscription analytics and reporting integrated into WooCommerce's native reporting system, with custom filters to distinguish subscription orders and dedicated subscription metrics.
+Comprehensive subscription analytics and reporting integrated directly into WooCommerce's native Analytics and Reporting system. No separate reporting interface—all subscription metrics appear within WooCommerce Analytics where you already manage your store data.
+
+**WooCommerce Integration:** Adds custom filters and dedicated subscription reports to WooCommerce Analytics, allowing you to segment and analyze subscription revenue alongside your regular WooCommerce sales data.
 
 ---
 

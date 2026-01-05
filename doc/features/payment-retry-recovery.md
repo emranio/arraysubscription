@@ -3,6 +3,8 @@
 ## Overview
 Automatically handle failed subscription payments through intelligent retry logic, customer notifications, and recovery tools to minimize involuntary churn and maximize revenue recovery.
 
+**WooCommerce Integration:** Failed payment retry creates new WooCommerce order attempts. Each retry is logged in WooCommerce's order system, and successful recoveries appear as standard WooCommerce orders in reporting.
+
 ---
 
 ## User Stories

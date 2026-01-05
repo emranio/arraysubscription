@@ -3,6 +3,8 @@
 ## Overview
 Allow customers to switch between subscription plans—upgrading to higher tiers, downgrading to lower tiers, or crossgrading to different plans at similar price points—while maintaining subscription continuity.
 
+**WooCommerce Integration:** Plan changes create new WooCommerce orders for proration charges or credits. All billing adjustments flow through WooCommerce's standard order system, ensuring proper accounting and reporting.
+
 ### Switching Types
 - **Upgrade**: Switch to a higher-priced plan with more features/products
 - **Downgrade**: Switch to a lower-priced plan with fewer features/products

@@ -3,6 +3,8 @@
 ## Overview
 Enable store owners to create and manage subscription-based products using WooCommerce's native product system, with additional subscription-specific options.
 
+**WooCommerce Integration:** Subscriptions are configured as standard WooCommerce products with additional subscription settings. They work with WooCommerce's existing product types (simple, variable, virtual, downloadable), inventory system, and all product features.
+
 ---
 
 ## User Stories

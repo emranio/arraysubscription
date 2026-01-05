@@ -3,6 +3,8 @@
 ## Overview
 Support multiple payment gateways for processing subscription payments, with automatic recurring payment support for major gateways and manual payment support for any WooCommerce gateway.
 
+**WooCommerce Integration:** Uses WooCommerce's native payment gateway system. Any WooCommerce-compatible payment gateway can process subscription payments. Automatic recurring billing is enabled for gateways that support tokenization (Stripe, PayPal, Paddle, FastSpring).
+
 ---
 
 ## User Stories

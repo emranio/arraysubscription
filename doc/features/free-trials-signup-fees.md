@@ -3,6 +3,8 @@
 ## Overview
 Offer promotional incentives to attract new subscribers through free trial periods and charge one-time signup fees for premium subscription access.
 
+**WooCommerce Integration:** Trial periods and signup fees are configured directly on WooCommerce product pages as additional product settings. They appear in the standard WooCommerce cart and checkout flow.
+
 ---
 
 ## User Stories

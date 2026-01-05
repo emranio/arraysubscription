@@ -1,7 +1,9 @@
 # Refunds
 
 ## Overview
-Provide administrators with comprehensive refund capabilities to handle full refunds, partial refunds, and prorated refunds for subscription payments through the admin panel, integrated with WooCommerce's refund system.
+Provide administrators with comprehensive refund capabilities to handle full refunds, partial refunds, and prorated refunds for subscription payments through the admin panel.
+
+**WooCommerce Integration:** Fully integrated with WooCommerce's native refund system. All refunds are processed through WooCommerce orders, appear in WooCommerce reports, and work seamlessly with payment gateways and third-party plugins.
 
 ---
 

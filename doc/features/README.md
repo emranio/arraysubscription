@@ -34,7 +34,7 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 
 | Feature | Description |
 |---------|-------------|
-| [Split Payment / Installments](split-payment.md) | Allow customers to pay in installments |
+| [Split Payment / Cost Sharing](split-payment.md) | Split subscription costs between multiple people |
 | [Subscription Bundle](subscription-bundle.md) | Customizable bundles, cart bundling, one-click checkout |
 | [Upgrade, Downgrade & Crossgrade](upgrade-downgrade-crossgrade.md) | Plan switching with proration |
 | [Payment Synchronization](subscription-synchronization.md) | Sync all renewals to specific days |

@@ -3,6 +3,8 @@
 ## Overview
 Allow customers to subscribe to curated product bundles where they can customize the contents, or create their own bundles by adding multiple subscription products to cart. Perfect for snack boxes, beauty boxes, wine clubs, multi-product subscriptions, and other curated subscription services.
 
+**WooCommerce Integration:** Bundles use WooCommerce's standard cart and checkout flow. When multiple subscriptions are bundled, they're synchronized to renew together, with each renewal creating a single WooCommerce order containing all bundled items.
+
 ---
 
 ## User Stories

@@ -3,6 +3,8 @@
 ## Overview
 When a customer cancels a subscription, collect a cancellation reason and optionally present retention offers (pause, downgrade, coupon, skip next renewal) to reduce churn and improve subscription insights.
 
+**WooCommerce Integration:** Cancellation happens through the WooCommerce My Account interface. Retention offers like coupons use WooCommerce's native coupon system, and plan downgrades create WooCommerce orders for any proration adjustments.
+
 ---
 
 ## User Stories
