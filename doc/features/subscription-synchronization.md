@@ -1,4 +1,4 @@
-# Subscription Synchronization
+# Synchronize Subscription renewal dates
 
 ## Overview
 Synchronize all subscription renewal dates to specific days (e.g., 1st of month, every Monday) for easier billing management, cash flow prediction, and operational efficiency.

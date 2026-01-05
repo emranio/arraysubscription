@@ -10,6 +10,7 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 | Feature | Description |
 |---------|-------------|
 | [Subscription Products](subscription-products.md) | Create and manage subscription-based WooCommerce products |
+| [Installment Payments](installments.md) | Allow non-subscription products to be paid in installments |
 | [Recurring Billing](recurring-billing.md) | Automated recurring payment processing through WooCommerce orders |
 | [Free Trials & Signup Fees](free-trials-signup-fees.md) | Offer trial periods and charge one-time signup fees |
 | [Payment Gateways](payment-gateways.md) | Stripe, PayPal, Paddle, FastSpring integration for automatic payments |
@@ -56,6 +57,7 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 
 | Feature | Description |
 |---------|-------------|
+| [Feature Manager](feature-manager.md) | Define product features/entitlements and display in customer My Account |
 | [Restrict Access](restrict-access.md) | Gate URLs, content, CPT/taxonomies, and assign roles based on subscription status |
 | [General Features](general-features.md) | Pause/resume, shipping, API, logging, and more |
 
