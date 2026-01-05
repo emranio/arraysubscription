@@ -5,7 +5,13 @@ Enable store owners to create and manage subscription-based products using WooCo
 
 **WooCommerce Integration:** Subscriptions are configured as standard WooCommerce products with additional subscription settings. They work with WooCommerce's existing product types (simple, variable, virtual, downloadable), inventory system, and all product features.
 
-> **Note:** Subscriptions and Installments are mutually exclusive. A product (or variation) can be configured as either a subscription product OR an installment product, but not both. See [Installments](installments.md) for one-time purchases paid over time.
+### Product Type Selection
+On each WooCommerce product or variation, admin can select one of three mutually exclusive options:
+- **Enable Subscription** - Creates a recurring billing product
+- **Enable Installment** - Allows one-time purchase paid over multiple payments (see [Installments](installments.md))
+- **Enable Donation** - Accepts donation payments (see [Donations](donations.md))
+
+After selecting an option, the related settings for that type appear in the product editor.
 
 ---
 

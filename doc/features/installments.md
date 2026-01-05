@@ -5,7 +5,13 @@ Allow customers to purchase non-subscription WooCommerce products in easy instal
 
 **WooCommerce Integration:** Each installment payment creates a standard WooCommerce order, ensuring full compatibility with WooCommerce's order management, reporting, and third-party integrations. Installment schedules are managed alongside the customer's regular WooCommerce orders.
 
-> **Note:** Installments and Subscriptions are mutually exclusive. A product (or variation) can be configured as either an installment product OR a subscription product, but not both.
+### Product Type Selection
+On each WooCommerce product or variation, admin can select one of three mutually exclusive options:
+- **Enable Subscription** - Creates a recurring billing product (see [Subscription Products](subscription-products.md))
+- **Enable Installment** - Allows one-time purchase paid over multiple payments
+- **Enable Donation** - Accepts donation payments (see [Donations](donations.md))
+
+After selecting an option, the related settings for that type appear in the product editor.
 
 ---
 
