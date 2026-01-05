@@ -57,6 +57,7 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 
 | Feature | Description |
 |---------|-------------|
+| [Restrict Access](restrict-access.md) | Gate URLs, content, CPT/taxonomies, and assign roles based on subscription status |
 | [General Features](general-features.md) | Pause/resume, shipping, API, logging, and more |
 
 ---
