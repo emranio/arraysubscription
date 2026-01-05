@@ -104,4 +104,3 @@ Comprehensive admin tools for managing all subscriptions, viewing subscription d
 > **Additional Acceptance Criteria:**
 > - Manual subscription creation: See [Manual Subscription Administration](manual-subscription-admin.md)
 > - Refund processing: See [Refunds](refunds.md)
-- [ ] Activity log tracks all subscription changes

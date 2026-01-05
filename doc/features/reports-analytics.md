@@ -52,6 +52,7 @@ New reports section in WooCommerce Analytics menu:
 - **MRR (Monthly Recurring Revenue)**: Current monthly subscription revenue
 - **ARR (Annual Recurring Revenue)**: Projected annual subscription revenue
 - **Net Revenue**: Total after refunds and chargebacks
+- **Refund Impact on MRR/ARR**: Track how refunds reduce net recurring revenue (see [Refunds](refunds.md))
 - **Revenue by Product**: Breakdown by subscription product
 - **Revenue Growth**: Month-over-month and year-over-year trends
 

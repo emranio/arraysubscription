@@ -3,6 +3,9 @@
 ## Overview
 Automate the collection of recurring payments through WooCommerce's order system. All renewal invoices are generated as WooCommerce orders, ensuring compatibility with WooCommerce's discount system, reporting, and third-party plugins.
 
+## Terminology
+- **Invoice**: A WooCommerce **Order** (initial subscription order and all renewal orders)
+
 ---
 
 ## User Stories
