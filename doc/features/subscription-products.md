@@ -30,7 +30,6 @@ Enable store owners to create and manage subscription-based products using WooCo
 ### Product Configuration
 - **Simple Subscription Products**: Convert any simple product to subscription
 - **Variable Subscription Products**: Create variations with different subscription plans (monthly vs yearly)
-- **Mixed Cart Support**: Allow subscription and non-subscription products in the same cart
 - **Product Types**: Support for physical, virtual, and downloadable subscription products
 
 ### Billing Configuration
@@ -38,6 +37,20 @@ Enable store owners to create and manage subscription-based products using WooCo
 - **Billing Interval**: Every X days/weeks/months/years (e.g., every 2 months)
 - **Subscription Length**: Set total duration or make it unlimited/ongoing
 - **Renewal Date Display**: Show next billing date to customers
+
+### Different Renewal Pricing
+Charge different prices for initial subscription vs renewals—ideal for introductory offers and software license renewals:
+
+- **Initial Price**: Price charged for the first billing period
+- **Renewal Price**: Price charged for subsequent renewals
+- **Product-Level Setting**: Configure directly on subscription product
+- **Clear Display**: Show both prices on product page (e.g., "$99 first year, then $149/year")
+- **Cart/Checkout Transparency**: Display renewal price clearly before purchase
+
+**Example Use Cases:**
+- Software licenses: $99 first year, $149 renewal
+- Introductory offers: $19 first month, $39/month thereafter
+- Promotional pricing: 50% off first period, full price on renewal
 
 ### Display Options
 - **Subscription Info on Product Page**: Display billing cycle, price, and terms

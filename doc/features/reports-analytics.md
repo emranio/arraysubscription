@@ -76,6 +76,15 @@ New reports section in WooCommerce Analytics menu:
 - **Recovery Rate**: Failed payments subsequently collected
 - **Payment Method Distribution**: Breakdown by gateway
 
+#### Non-Payers & Outstanding Dues Report
+Track customers who haven't paid their subscription dues:
+- **Unpaid Renewals List**: Customers with failed/pending renewal payments
+- **Date Range Filter**: Filter by dues period (e.g., "Who didn't pay Q4 2025 dues")
+- **Outstanding Amount**: Total unpaid subscription revenue
+- **Customer Details**: Name, email, subscription, amount owed, days overdue
+- **Export List**: Download CSV for follow-up or accounting
+- **Bulk Actions**: Send reminder emails, suspend subscriptions
+
 ### Report Visualizations
 - **Charts & Graphs**: Visual representation of trends
 - **Comparison Views**: Compare periods side-by-side

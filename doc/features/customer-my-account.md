@@ -1,7 +1,9 @@
 # Customer My Account Portal
 
 ## Overview
-A dedicated subscription management area within the WooCommerce My Account page where customers can view, manage, and control all aspects of their subscriptions.
+This plugin extends WooCommerce's native My Account customer panel by adding dedicated subscription management pages. Customers access their subscriptions through additional tabs/pages within the existing WooCommerce My Account area—no separate login or interface required.
+
+**Implementation:** New pages and tabs are injected into WooCommerce's standard customer account dashboard, maintaining consistent branding and user experience with the rest of WooCommerce.
 
 ---
 
@@ -17,7 +19,7 @@ A dedicated subscription management area within the WooCommerce My Account page 
 - I want to reactivate a paused or cancelled subscription
 - I want to update my payment method
 - I want to change my billing/shipping address for subscriptions
-- I want to upgrade or downgrade my subscription plan
+- I want to upgrade or downgrade or cross-grade my subscription plan
 - I want to renew my subscription early if I choose
 - I want to download invoices for my subscription payments
 
@@ -25,8 +27,36 @@ A dedicated subscription management area within the WooCommerce My Account page 
 
 ## Features
 
-### Subscriptions Tab in My Account
-New "Subscriptions" tab in WooCommerce My Account showing:
+### Additional Pages Added to WooCommerce My Account
+
+The plugin injects the following new pages into the existing WooCommerce My Account customer panel:
+
+#### 1. Subscriptions List Page (`/my-account/subscriptions`)
+New tab appears in the WooCommerce My Account navigation menu:
+- Located alongside existing tabs (Dashboard, Orders, Downloads, Addresses, etc.)
+- Lists all customer subscriptions with status and quick details
+- Seamlessly integrated with WooCommerce's native styling and layout
+
+#### 2. Subscription Detail Page (`/my-account/view-subscription/{id}`)
+Individual subscription management page:
+- Accessed by clicking a subscription from the list
+- Shows complete subscription details and history
+- Provides subscription-specific actions (cancel, pause, edit, etc.)
+
+#### 3. Edit Subscription Payment Method Page (`/my-account/subscription/{id}/payment-method`)
+Dedicated page for updating payment information:
+- Accessed from subscription detail page
+- Uses WooCommerce's payment method update flow
+- Updates saved payment method for future renewals
+
+### Subscriptions Tab in My Account Navigation
+New "Subscriptions" tab added to WooCommerce My Account menu:
+- Appears in the left sidebar or top navigation (theme-dependent)
+- Position configurable: after Orders, after Dashboard, or custom placement
+- Badge showing active subscription count (optional)
+- Uses WooCommerce's native menu system
+
+### Subscription List Page
 - List of all subscriptions (active, on-hold, cancelled, expired)
 - Quick status overview
 - Key details for each subscription at a glance
@@ -98,11 +128,28 @@ Clicking a subscription shows:
 
 ---
 
-## My Account Integration
+## WooCommerce My Account Integration
 
-### Tab Placement
-- New "Subscriptions" tab in WooCommerce My Account menu
-- Positioned prominently (after Orders or Dashboard)
+### How Pages Are Added
+- **Uses WooCommerce Endpoints**: Pages created using WooCommerce's native endpoint system
+- **Automatic URL Generation**: URLs follow WooCommerce patterns (`/my-account/subscriptions`, `/my-account/view-subscription/123`)
+- **Theme Compatible**: Works with any WooCommerce-compatible theme
+- **Native Styling**: Inherits theme's WooCommerce My Account styles automatically
+- **No Separate Login**: Customers access subscriptions through their existing WooCommerce account
+
+### Menu Integration
+- "Subscriptions" tab added to existing WooCommerce My Account navigation
+- Menu order configurable in settings
+- Appears alongside: Dashboard, Orders, Downloads, Addresses, Account details, etc.
+- Uses WooCommerce's `woocommerce_account_menu_items` filter
+
+### Endpoint Registration
+The plugin registers these WooCommerce endpoints:
+- `subscriptions` → Subscription list page
+- `view-subscription` → Individual subscription detail
+- `subscription-payment-method` → Update payment method
+
+> **Technical Note:** These are standard WooCommerce endpoints, not custom post types or separate pages. They automatically inherit theme styling and work with WooCommerce's permalink structure.
 
 ### Shortcode Support
 - `[subscription_table]` - Display subscription list anywhere
@@ -116,7 +163,12 @@ Clicking a subscription shows:
 
 ## Acceptance Criteria
 
-- [ ] "Subscriptions" tab appears in WooCommerce My Account
+- [ ] "Subscriptions" tab appears in WooCommerce My Account navigation menu
+- [ ] Subscription list page accessible at `/my-account/subscriptions`
+- [ ] Individual subscription detail page accessible at `/my-account/view-subscription/{id}`
+- [ ] Payment method update page accessible at `/my-account/subscription/{id}/payment-method`
+- [ ] All pages use WooCommerce's native endpoint system
+- [ ] Pages inherit theme's WooCommerce My Account styling
 - [ ] All customer subscriptions listed with status
 - [ ] Click-through to detailed subscription view
 - [ ] All related orders displayed in subscription detail
@@ -124,8 +176,9 @@ Clicking a subscription shows:
 - [ ] Customer can pause/resume subscription (if enabled)
 - [ ] Customer can update payment method
 - [ ] Customer can edit billing/shipping address
-- [ ] Customer can upgrade/downgrade plan
+- [ ] Customer can upgrade/downgrade/crossgrade plan
 - [ ] Early renewal option available
 - [ ] Invoice download available for all related orders
 - [ ] Mobile-responsive design
 - [ ] Shortcode available for subscription table
+- [ ] Works with popular WooCommerce themes (Storefront, Astra, etc.)

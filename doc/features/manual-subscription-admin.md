@@ -81,23 +81,10 @@ Enable administrators to manually create subscriptions, modify existing subscrip
 
 #### Bulk Operations
 - Create multiple subscriptions at once
-- Import subscriptions from CSV
 - Bulk product/variation changes
 - Mass date adjustments
 
-### Migration Support
-
-#### Import from Other Systems
-- Import subscriptions from other plugins
-- Migrate from external subscription platforms
-- Map fields from import file
-- Validate imported data before creation
-
-#### Data Mapping
-- Customer matching (by email, ID)
-- Product matching
-- Status mapping
-- Date format handling
+> **See Also:** [Subscription Import & Migration](subscription-import-migration.md) for importing subscriptions from CSV or migrating from WooCommerce Subscriptions.
 
 ---
 

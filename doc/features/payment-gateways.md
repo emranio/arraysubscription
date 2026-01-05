@@ -76,6 +76,8 @@ Any WooCommerce payment gateway can be used for manual renewals:
 - **Fallback Options**: If automatic payment fails, offer manual payment
 - **Gateway Fees**: Support for gateway-specific fees on renewals
 
+> **See Also:** [Restrict Access](restrict-access.md#payment-method-restrictions) for restricting which payment methods are available for subscription products.
+
 ---
 
 ## Supported Gateways Summary

@@ -25,6 +25,16 @@ This document covers smaller features, general capabilities, and supplementary f
 - Supports WooCommerce shipping plugins
 - Works with page builders (Elementor, Gutenberg, etc.)
 
+### Subscription Coupon Fields
+Additional fields injected into WooCommerce's native coupon settings:
+
+| Field | Options | Description |
+|-------|---------|-------------|
+| Apply to Subscriptions | Yes / No | Whether this coupon can be used on subscription products |
+| Discount Duration | One-time / Recurring | One-time: initial payment only. Recurring: applies to future renewals too |
+
+> Uses WooCommerce's default coupon system—no separate coupon management needed.
+
 ---
 
 ## Pause & Resume Subscriptions
@@ -69,8 +79,6 @@ This document covers smaller features, general capabilities, and supplementary f
 
 ### Cart & Checkout
 - Allow multiple subscription products in single cart
-- Mix subscription and non-subscription products
-- Process mixed carts in single checkout
 - Separate renewal schedules per subscription
 
 ### Per-Customer Limits
@@ -197,10 +205,29 @@ This document covers smaller features, general capabilities, and supplementary f
 ## Localization
 
 ### Translation Ready
-- Full translation support
+- Full translation support (.pot file included)
 - RTL language support
-- WPML compatibility
+- WPML and Polylang compatibility
+- TranslatePress compatible
 - Localized date/currency formats
+- Customizable front-end text strings (e.g., "Subscribe", "Next payment", "Billing details")
+
+---
+
+## EU & International Compliance
+
+### German Market ("Germanized Pro" plugin Compatible)
+- Uses standard WooCommerce checkout template and hooks
+- Germanized Pro can inject required contract summary
+- Legal compliance plugins work seamlessly
+- Standard WooCommerce product and order structure maintained
+
+### EU Compliance
+- EU-compliant invoicing through WooCommerce order system
+- Compatible with WooCommerce PDF invoice plugins for e-invoicing
+- GDPR-compliant data handling
+- Customer data export/deletion support
+- Clear subscription terms display before purchase
 
 ---
 
@@ -218,7 +245,6 @@ This document covers smaller features, general capabilities, and supplementary f
 - [ ] WooCommerce is required dependency
 - [ ] HPOS compatibility
 - [ ] Pause/resume functionality
-- [ ] Mixed cart support (subscription + regular products)
 - [ ] Download access control for digital subscriptions
 - [ ] REST API endpoints functional
 - [ ] Shortcodes and blocks available

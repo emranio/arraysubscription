@@ -22,6 +22,7 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 |---------|-------------|
 | [Admin Subscription Management](subscription-management-admin.md) | Dedicated admin page for managing all subscriptions |
 | [Manual Subscription Administration](manual-subscription-admin.md) | Create subscriptions manually, change products/variations |
+| [Subscription Import & Migration](subscription-import-migration.md) | Migrate from WooCommerce Subscriptions, CSV import |
 | [Refunds](refunds.md) | Full, partial, and prorated refunds from admin panel |
 | [Cancellation Reasons & Retention Offers](cancellation-reasons-retention-offers.md) | Collect cancel reasons and offer pause/downgrade/coupons |
 | [Customer My Account](customer-my-account.md) | Self-service portal for customers to manage subscriptions |
@@ -34,12 +35,11 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 | Feature | Description |
 |---------|-------------|
 | [Split Payment / Installments](split-payment.md) | Allow customers to pay in installments |
-| [Subscription Box](subscription-box.md) | Customizable product boxes on subscription |
+| [Subscription Bundle](subscription-bundle.md) | Customizable bundles, cart bundling, one-click checkout |
 | [Upgrade, Downgrade & Crossgrade](upgrade-downgrade-crossgrade.md) | Plan switching with proration |
 | [Payment Synchronization](subscription-synchronization.md) | Sync all renewals to specific days |
 | [Skip Next Renewal / Vacation Mode](skip-next-renewal-vacation-mode.md) | Skip one billing cycle without cancelling |
 | [Gifting & Transfer Subscription](gifting-transfer-subscription.md) | Gift subscriptions and transfer ownership |
-| [Seat-Based Subscriptions (B2B)](seat-based-subscriptions.md) | Seats/licenses with assignment and utilization reporting |
 
 ---
 
@@ -49,7 +49,6 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 |---------|-------------|
 | [Payment Retry & Recovery](payment-retry-recovery.md) | Automatic failed payment handling and dunning |
 | [Email Notifications](email-notifications.md) | Automated customer and admin notifications |
-| [Coupons & Discounts](coupons-discounts.md) | Subscription-specific coupons using WooCommerce system |
 
 ---
 

@@ -121,7 +121,23 @@ Behavior options:
 > Implementation note (for dev): WordPress media can be accessed via attachment pages and also direct file URLs. Minimum viable restriction is enforcing eligibility on **attachment pages and generated download links**, with optional “protected downloads” mode for direct URLs.
 
 ---
+### Payment Method Restrictions
+Control which payment methods are available for subscription products at checkout.
 
+#### Features
+- **Automatic Payments Only**: Hide manual payment methods (bank transfer, invoice, check) for subscription products
+- **Per-Product Restriction**: Configure payment method availability per subscription product
+- **Gateway Filtering**: Restrict subscriptions to gateways that support automatic recurring billing
+- **Clear Checkout**: Only show valid payment options when cart contains subscriptions
+
+#### Use Cases
+- Hide "Pay by Invoice" and "Bank Transfer" when cart contains a subscription
+- Require Stripe or PayPal for subscription products to ensure automatic renewals
+- Allow manual payments for one-time products but not subscriptions
+
+**Example:** A customer adds a subscription product to cart. At checkout, only Stripe and PayPal are shown—bank transfer and invoice options are hidden to ensure reliable automatic renewals.
+
+---
 ## Multisite Support
 
 ### Rules scope
