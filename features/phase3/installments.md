@@ -5,6 +5,19 @@ Allow customers to purchase non-subscription WooCommerce products in easy instal
 
 **WooCommerce Integration:** Each installment payment creates a standard WooCommerce order, ensuring full compatibility with WooCommerce's order management, reporting, and third-party integrations. Installment schedules are managed alongside the customer's regular WooCommerce orders.
 
+### Supported WooCommerce Product Types
+
+WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **External/Affiliate**.
+
+| Product Type | Installment UI | Notes |
+|--------------|----------------|-------|
+| **Simple** | ✓ Full support | Enable Installment checkbox appears in product settings |
+| **Variable** | ✓ Full support | Per-variation installment settings available |
+| **Grouped** | ✗ No UI | Grouped products not supported for installments |
+| **External** | ✗ Not supported | External products are sold on other sites |
+
+> **Note:** The installment UI is integrated into **Simple** and **Variable** products only.
+
 ### Product Type Selection
 On each WooCommerce product or variation, admin can select one of three mutually exclusive options:
 - **Enable Subscription** - Creates a recurring billing product (see [Subscription Products](subscription-products.md))

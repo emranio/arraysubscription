@@ -3,8 +3,20 @@
 ## Overview
 Define and display product features/entitlements on any WooCommerce product. Admins configure features in a table-like UI on the product edit page, and customers see their entitled features in their My Account panel based on their active subscriptions or purchases.
 
-
 **WooCommerce Integration:** Feature Manager adds a new meta box to WooCommerce's product edit screen. Features are stored as product meta and displayed in the customer's WooCommerce My Account area.
+
+### Supported WooCommerce Product Types
+
+WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **External/Affiliate**.
+
+| Product Type | Feature Manager UI | Notes |
+|--------------|-------------------|-------|
+| **Simple** | ✓ Full support | Feature table appears in product edit screen |
+| **Variable** | ✓ Full support | Features can be set per product or per variation |
+| **Grouped** | ✗ No UI | Features defined on child products instead |
+| **External** | ✗ Not supported | External products are sold on other sites |
+
+> **Note:** The Feature Manager UI is integrated into **Simple** and **Variable** products only. For grouped products, define features on the individual child products.
 
 ---
 

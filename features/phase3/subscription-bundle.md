@@ -5,6 +5,27 @@ Allow customers to subscribe to curated product bundles where they can customize
 
 **WooCommerce Integration:** Bundles use WooCommerce's standard cart and checkout flow. When multiple subscriptions are bundled, they're synchronized to renew together, with each renewal creating a single WooCommerce order containing all bundled items.
 
+### Bundle Types & Product Type Support
+
+There are two ways to create subscription bundles:
+
+| Bundle Type | Created By | WooCommerce Product Type | Description |
+|-------------|------------|-------------------------|-------------|
+| **Admin-Created Bundle** | Store Admin | Grouped Product | Admin creates a grouped product containing subscription items |
+| **Customer-Created Bundle** | Customer | Cart Bundling | Customer adds multiple subscriptions to cart, bundled at checkout |
+
+#### WooCommerce Product Types
+WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **External/Affiliate**.
+
+| Product Type | As Bundle Container | As Bundle Item | Notes |
+|--------------|--------------------|--------------------|-------|
+| **Simple** | ✗ | ✓ | Can be included in bundles |
+| **Variable** | ✗ | ✓ | Variations can be included in bundles |
+| **Grouped** | ✓ Admin bundles | ✗ | Admin uses grouped products to create curated bundles |
+| **External** | ✗ | ✗ | Not supported |
+
+> **Note:** Admin-created bundles use WooCommerce's native **Grouped Product** type. Customer-created bundles are formed dynamically at checkout by adding multiple subscription items to cart.
+
 ---
 
 ## User Stories

@@ -12,6 +12,19 @@ This document covers smaller features, general capabilities, and supplementary f
 - **Version Compatibility**: Support for latest WooCommerce versions
 - **HPOS Compatible**: High-Performance Order Storage support
 
+### Supported Product Types
+
+WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **External/Affiliate**.
+
+| Product Type | Plugin UI Integration | Admin Bundle Support | Notes |
+|--------------|----------------------|---------------------|-------|
+| **Simple** | ✓ Full support | ✓ Can be bundled | Subscription/Installment/Donation/Feature Manager UI available |
+| **Variable** | ✓ Full support | ✓ Can be bundled | Per-variation settings supported |
+| **Grouped** | ✗ No UI | ✓ As container | Admin can create grouped products containing subscription items |
+| **External** | ✗ Not supported | ✗ | External products are sold on other sites |
+
+> **Summary:** Our plugin's UI (Subscription, Installment, Donation, Feature Manager) integrates with **Simple** and **Variable** products. **Grouped products** are supported for admin-created bundles (containing subscription items as children). For customer-created bundles, see [Subscription Bundle](../phase3/subscription-bundle.md).
+
 ### Order System Integration
 - All subscription orders (initial and renewals) are WooCommerce orders
 - Standard WooCommerce checkout flow for subscription purchases

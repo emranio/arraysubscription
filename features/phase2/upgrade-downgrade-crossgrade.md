@@ -10,16 +10,76 @@ Allow customers to switch between subscription plans—upgrading to higher tiers
 - **Downgrade**: Switch to a lower-priced plan with fewer features/products
 - **Crossgrade**: Switch to a different plan at the same or similar price point (e.g., switching from "Basic Monthly" to "Basic Annual", or from "Plan A" to "Plan B" at the same tier)
 
+> **Note:** WooCommerce's native **Upsells** and **Cross-sells** in the "Linked Products" tab are used for product recommendations at cart/checkout. Our **Upgrades** and **Downgrades** are specifically for active subscription plan switching in My Account.
+
+---
+
+## Admin Configuration: Linked Products Integration
+
+### WooCommerce Native Linked Products
+WooCommerce already provides a "Linked Products" tab on the product edit page with:
+- **Upsells**: Products shown on the product page as recommendations
+- **Cross-sells**: Products shown in the cart as recommendations
+
+These work as normal for subscription products—they're product recommendations during the shopping experience.
+
+### Array Subscription: Upgrade & Downgrade Fields
+When a product has **"Enable Subscription"** checked, two additional fields appear in the **Linked Products** tab:
+
+| Field | Description |
+|-------|-------------|
+| **Upgrade Products** | Select subscription products that customers can upgrade TO from this product |
+| **Downgrade Products** | Select subscription products that customers can downgrade TO from this product |
+
+#### Linked Products Tab Layout (for Subscription Products)
+```
+┌─────────────────────────────────────────────────────────┐
+│ Linked Products                                          │
+├─────────────────────────────────────────────────────────┤
+│ Upsells          [Select products...              ▼]    │
+│ (WooCommerce)     Products shown on product page         │
+│                                                          │
+│ Cross-sells      [Select products...              ▼]    │
+│ (WooCommerce)     Products shown in cart                 │
+│                                                          │
+│ ─────────── Subscription Plan Switching ───────────     │
+│                                                          │
+│ Upgrade to       [Select subscription products... ▼]    │
+│ (Array Sub)       Plans customer can upgrade to          │
+│                                                          │
+│ Downgrade to     [Select subscription products... ▼]    │
+│ (Array Sub)       Plans customer can downgrade to        │
+└─────────────────────────────────────────────────────────┘
+```
+
+#### How It Works
+1. **Upgrade Products**: When viewing subscription in My Account, customer sees these as "Upgrade" options
+2. **Downgrade Products**: When viewing subscription in My Account, customer sees these as "Downgrade" options
+3. **Crossgrade**: If products are at similar price points, they appear as "Switch Plan" (neither upgrade nor downgrade)
+
+#### Example Setup
+**Basic Plan ($10/mo)**
+- Upgrade to: Pro Plan, Enterprise Plan
+- Downgrade to: (none - this is the lowest tier)
+
+**Pro Plan ($25/mo)**
+- Upgrade to: Enterprise Plan
+- Downgrade to: Basic Plan
+
+**Enterprise Plan ($50/mo)**
+- Upgrade to: (none - this is the highest tier)
+- Downgrade to: Pro Plan, Basic Plan
+
 ---
 
 ## User Stories
 
 ### As a Store Admin
-- I want to define upgrade, downgrade, and crossgrade paths between subscription plans
+- I want to define upgrade and downgrade products in the familiar "Linked Products" tab
 - I want to control whether customers can self-service plan changes
 - I want to choose how pricing adjustments are handled (prorated, immediate, next renewal)
 - I want to see when customers upgrade, downgrade, or crossgrade their plans
-- I want to configure which plans allow switching
+- I want to configure which plans allow switching using WooCommerce's product selector
 - I want to allow crossgrades between different product types at similar price points
 - I want to define crossgrade relationships (e.g., monthly ↔ annual, Plan A ↔ Plan B)
 
@@ -37,10 +97,10 @@ Allow customers to switch between subscription plans—upgrading to higher tiers
 
 ## Features
 
-### Plan Switching Configuration
-- **Upgrade Paths**: Define which plans can upgrade to which (higher tier)
-- **Downgrade Paths**: Define allowed downgrade options (lower tier)
-- **Crossgrade Paths**: Define lateral switches between plans at similar price points
+### Plan Switching Configuration (via Linked Products)
+- **Upgrade Products Field**: Select products customer can upgrade to (appears when subscription enabled)
+- **Downgrade Products Field**: Select products customer can downgrade to (appears when subscription enabled)
+- **Auto-Crossgrade Detection**: If linked products have similar prices, shown as "Switch" instead of upgrade/downgrade
 - **Same Product Variations**: Switch between variations of same product
 - **Cross-Product Switching**: Allow switching to entirely different subscription products
 - **Billing Cycle Switch**: Allow monthly ↔ annual crossgrades
@@ -140,7 +200,14 @@ When subscriptions are synced to a specific day (e.g., 1st of month) and a plan 
 
 ## Acceptance Criteria
 
-- [ ] Admin can configure upgrade/downgrade/crossgrade paths
+### Admin Configuration
+- [ ] "Upgrade to" field appears in Linked Products tab when subscription enabled
+- [ ] "Downgrade to" field appears in Linked Products tab when subscription enabled
+- [ ] Fields only show subscription-enabled products in selector
+- [ ] WooCommerce native Upsells/Cross-sells continue to work normally
+- [ ] Admin can configure proration settings globally and per-product
+
+### Customer Experience
 - [ ] Customer can view available plan change options (all three types)
 - [ ] Crossgrade between different products at same tier supported
 - [ ] Crossgrade between billing cycles (monthly ↔ annual) supported

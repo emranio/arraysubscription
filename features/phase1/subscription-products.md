@@ -3,7 +3,20 @@
 ## Overview
 Enable store owners to create and manage subscription-based products using WooCommerce's native product system, with additional subscription-specific options.
 
-**WooCommerce Integration:** Subscriptions are configured as standard WooCommerce products with additional subscription settings. They work with WooCommerce's existing product types (simple, variable, virtual, downloadable), inventory system, and all product features.
+**WooCommerce Integration:** Subscriptions are configured as standard WooCommerce products with additional subscription settings. They work with WooCommerce's existing product types, inventory system, and all product features.
+
+### Supported WooCommerce Product Types
+
+WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **External/Affiliate**.
+
+| Product Type | Subscription UI | Admin Bundle | Notes |
+|--------------|-----------------|--------------|-------|
+| **Simple** | ✓ Full support | ✓ | Enable Subscription/Installment/Donation checkboxes appear |
+| **Variable** | ✓ Full support | ✓ | Per-variation subscription settings available |
+| **Grouped** | ✗ No UI | ✓ | Admin can create grouped products containing subscription items |
+| **External** | ✗ Not supported | ✗ | External products are sold on other sites |
+
+> **Note:** The subscription/installment/donation UI is integrated into **Simple** and **Variable** products only. However, admins can create **Grouped products** that contain subscription products as children. For customer-created bundles, see [Subscription Bundle](../phase3/subscription-bundle.md).
 
 ### Product Type Selection
 On each WooCommerce product or variation, admin can select one of three mutually exclusive options:
