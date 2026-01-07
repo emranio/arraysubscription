@@ -5,62 +5,72 @@ Array Subscription is a WooCommerce subscription management plugin that handles 
 
 ---
 
-## Core Features
+## 📋 Development Phases
 
-| Feature | Description |
-|---------|-------------|
-| [Subscription Products](subscription-products.md) | Create and manage subscription-based WooCommerce products |
-| [Installment Payments](installments.md) | Allow non-subscription products to be paid in installments |
-| [Donations](donations.md) | Accept one-time and recurring donations with predefined or custom amounts |
-| [Recurring Billing](recurring-billing.md) | Automated recurring payment processing through WooCommerce orders |
-| [Free Trials & Signup Fees](free-trials-signup-fees.md) | Offer trial periods and charge one-time signup fees |
-| [Payment Gateways](payment-gateways.md) | Stripe, PayPal, Paddle, FastSpring integration for automatic payments |
+Features are organized into **4 progressive phases**, each delivering a fully functional and testable prototype.
 
----
+📁 **[View Complete Phases Overview](features/PHASES-OVERVIEW.md)**
 
-## Management Features
-
-| Feature | Description |
-|---------|-------------|
-| [Admin Subscription Management](subscription-management-admin.md) | Dedicated admin page for managing all subscriptions |
-| [Manual Subscription Administration](manual-subscription-admin.md) | Create subscriptions manually, change products/variations |
-| [Subscription Import & Migration](subscription-import-migration.md) | Migrate from WooCommerce Subscriptions, CSV import |
-| [Refunds](refunds.md) | Full, partial, and prorated refunds from admin panel |
-| [Cancellation Reasons & Retention Offers](cancellation-reasons-retention-offers.md) | Collect cancel reasons and offer pause/downgrade/coupons |
-| [Customer My Account](customer-my-account.md) | Self-service portal for customers to manage subscriptions |
-| [Reports & Analytics](reports-analytics.md) | Subscription-specific reports in WooCommerce Analytics |
+| Phase | Focus | Features | Description |
+|-------|-------|----------|-------------|
+| [**Phase 1**](features/phase1/README.md) | Core Foundation | 10 | MVP with subscriptions, billing, trials, admin |
+| [**Phase 2**](features/phase2/README.md) | Lifecycle & Retention | 7 | Dunning, cancellation, upgrades, refunds |
+| [**Phase 3**](features/phase3/README.md) | Advanced & Content | 6 | Bundles, installments, gifting, content gating |
+| [**Phase 4**](features/phase4/README.md) | Analytics & Premium | 4 | Reports, migration, donations, entitlements |
 
 ---
 
-## Advanced Features
+## Phase 1: Core Foundation (10 features)
 
 | Feature | Description |
 |---------|-------------|
-| [Split Payment / Cost Sharing](split-payment.md) | Split subscription costs between multiple people |
-| [Subscription Bundle](subscription-bundle.md) | Customizable bundles, cart bundling, one-click checkout |
-| [Upgrade, Downgrade & Crossgrade](upgrade-downgrade-crossgrade.md) | Plan switching with proration |
-| [Payment Synchronization](subscription-synchronization.md) | Sync all renewals to specific days |
-| [Skip Next Renewal / Vacation Mode](skip-next-renewal-vacation-mode.md) | Skip one billing cycle without cancelling |
-| [Gifting & Transfer Subscription](gifting-transfer-subscription.md) | Gift subscriptions and transfer ownership |
+| [General Features](features/phase1/general-features.md) | WooCommerce integration, HPOS, coupons, logging |
+| [Subscription Products](features/phase1/subscription-products.md) | Create subscription-based WooCommerce products |
+| [Recurring Billing](features/phase1/recurring-billing.md) | Automated recurring payment processing |
+| [Payment Gateways](features/phase1/payment-gateways.md) | Stripe, PayPal, Paddle, FastSpring integration |
+| [Customer My Account](features/phase1/customer-my-account.md) | Self-service portal for customers |
+| [Subscription Management (Admin)](features/phase1/subscription-management-admin.md) | Dedicated admin page for managing subscriptions |
+| [Email Notifications](features/phase1/email-notifications.md) | Automated customer and admin notifications |
+| [Free Trials & Signup Fees](features/phase1/free-trials-signup-fees.md) | Trial periods and one-time signup fees |
+| [Manual Subscription Admin](features/phase1/manual-subscription-admin.md) | Create subscriptions manually, product swaps |
 
 ---
 
-## Payment & Communication
+## Phase 2: Lifecycle & Retention (7 features)
 
 | Feature | Description |
 |---------|-------------|
-| [Payment Retry & Recovery](payment-retry-recovery.md) | Automatic failed payment handling and dunning |
-| [Email Notifications](email-notifications.md) | Automated customer and admin notifications |
+| [Payment Retry & Recovery](features/phase2/payment-retry-recovery.md) | Failed payment handling and dunning |
+| [Cancellation & Retention](features/phase2/cancellation-reasons-retention-offers.md) | Collect reasons, offer retention deals |
+| [Skip / Vacation Mode](features/phase2/skip-next-renewal-vacation-mode.md) | Skip billing cycle, pause/resume |
+| [Upgrades & Downgrades](features/phase2/upgrade-downgrade-crossgrade.md) | Plan switching with proration |
+| [Refunds](features/phase2/refunds.md) | Full, partial, and prorated refunds |
+| [Synchronization](features/phase2/subscription-synchronization.md) | Sync renewals to specific days |
+| [Multi-Currency](features/phase2/multi-currency.md) | Multi-currency support for global stores |
 
 ---
 
-## Supporting Features
+## Phase 3: Advanced & Content (6 features)
 
 | Feature | Description |
 |---------|-------------|
-| [Feature Manager](feature-manager.md) | Define product features/entitlements and display in customer My Account |
-| [Restrict Access](restrict-access.md) | Gate URLs, content, CPT/taxonomies, and assign roles based on subscription status |
-| [General Features](general-features.md) | Pause/resume, shipping, API, logging, and more |
+| [Restrict Access](features/phase3/restrict-access.md) | Content gating, role assignment, downloads |
+| [Subscription Shipping](features/phase3/shipping-subscriptions.md) | One-time vs recurring shipping fees |
+| [Subscription Bundle](features/phase3/subscription-bundle.md) | Customizable bundles, build-your-own boxes |
+| [Installment Payments](features/phase3/installments.md) | Buy now, pay later in installments |
+| [Gifting & Transfer](features/phase3/gifting-transfer-subscription.md) | Gift subscriptions, transfer ownership |
+| [Split Payment](features/phase3/split-payment.md) | Split costs between multiple people |
+
+---
+
+## Phase 4: Analytics & Premium (4 features)
+
+| Feature | Description |
+|---------|-------------|
+| [Reports & Analytics](features/phase4/reports-analytics.md) | MRR/ARR, churn in WooCommerce Analytics |
+| [Import & Migration](features/phase4/subscription-import-migration.md) | WooCommerce Subscriptions migration, CSV import |
+| [Donations](features/phase4/donations.md) | One-time and recurring donations |
+| [Feature Manager](features/phase4/feature-manager.md) | Product entitlements display |
 
 ---
 

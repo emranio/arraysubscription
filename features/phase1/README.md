@@ -5,7 +5,7 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 
 ---
 
-## 📦 Features Included
+## 📦 Features Included (10 features)
 
 | # | Feature File | Priority | Description |
 |---|--------------|----------|-------------|
@@ -16,6 +16,8 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 | 5 | [customer-my-account.md](customer-my-account.md) | **High** | My Account portal, subscription list, basic self-service |
 | 6 | [subscription-management-admin.md](subscription-management-admin.md) | **High** | Admin subscription list, status management, basic actions |
 | 7 | [email-notifications.md](email-notifications.md) | **High** | Core emails: new subscription, renewal, cancellation |
+| 8 | [free-trials-signup-fees.md](free-trials-signup-fees.md) | **High** | Free trial periods, one-time signup fees |
+| 9 | [manual-subscription-admin.md](manual-subscription-admin.md) | **High** | Admin creates subscriptions manually, product swaps |
 
 ---
 
@@ -24,7 +26,7 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 ### Step 1: Data Model & Infrastructure
 1. **Custom Post Type** for subscriptions (`shop_subscription`)
 2. **Database schema** for subscription meta
-3. **Subscription statuses**: pending, active, on-hold, cancelled, expired
+3. **Subscription statuses**: pending, active, on-hold, cancelled, expired, trial
 4. **WooCommerce hooks** integration
 5. **HPOS compatibility** layer
 
@@ -78,6 +80,19 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 4. Subscription cancelled email
 5. WooCommerce email settings integration
 
+### Step 9: Free Trials & Signup Fees
+1. Product meta: `_trial_length`, `_trial_period`, `_signup_fee`
+2. Trial status for subscriptions (`wc-trial`)
+3. No payment required option for trial start
+4. Trial end date calculation & auto-conversion
+5. Signup fee on initial order only
+
+### Step 10: Manual Subscription Admin
+1. "Add New Subscription" admin page
+2. Customer/product selector with custom pricing
+3. Payment options: charge now, skip, invoice, mark paid
+4. Change product/variation of existing subscription
+
 ---
 
 ## ✅ Phase 1 Testing Checklist
@@ -111,6 +126,8 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 - [ ] Can view subscription details
 - [ ] Can change subscription status manually
 - [ ] Related orders visible on subscription page
+- [ ] Can create subscription manually
+- [ ] Can change subscription product
 
 ### Customer My Account Tests
 - [ ] Subscriptions tab appears in My Account
@@ -118,6 +135,13 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 - [ ] Can view individual subscription details
 - [ ] Can cancel subscription
 - [ ] Can update payment method
+
+### Free Trial & Signup Fee Tests
+- [ ] Can configure trial period per product
+- [ ] Trial subscription has correct status
+- [ ] Auto-conversion to paid on trial end
+- [ ] Signup fee configurable per product
+- [ ] Fee appears on initial order only
 
 ### Email Tests
 - [ ] New subscription email sent to customer
@@ -133,7 +157,7 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 ### Custom Post Type
 ```php
 // shop_subscription post type
-// Statuses: wc-pending, wc-active, wc-on-hold, wc-cancelled, wc-expired
+// Statuses: wc-pending, wc-active, wc-on-hold, wc-cancelled, wc-expired, wc-trial
 ```
 
 ### Key Meta Fields
@@ -145,23 +169,27 @@ Build the **Minimum Viable Subscription Plugin** — a fully functional prototyp
 - `_payment_method` (gateway ID)
 - `_payment_method_token` (encrypted)
 - `_customer_id` (user ID)
+- `_trial_length`, `_trial_period`
+- `_signup_fee`
 
 ### Action Scheduler Jobs
 - `arraysubscription_scheduled_renewal` - Process renewal payment
 - `arraysubscription_subscription_status_check` - Status verification
+- `arraysubscription_trial_ended` - Convert trial to paid
 
 ---
 
 ## 🚀 Deliverable
 
 A working subscription plugin where:
-1. Store owner creates a "Monthly Premium Plan" at $29/month
-2. Customer purchases and pays with Stripe
+1. Store owner creates a "Monthly Premium Plan" at $29/month with 14-day trial
+2. Customer purchases and pays with Stripe (or starts free trial)
 3. Subscription shows in customer's My Account
-4. 30 days later, customer is charged automatically
-5. New WooCommerce order appears for the renewal
-6. Customer and admin receive emails
-7. Admin can view/manage all subscriptions
+4. Trial converts to paid automatically
+5. 30 days later, customer is charged automatically
+6. New WooCommerce order appears for the renewal
+7. Customer and admin receive emails
+8. Admin can view/manage all subscriptions and create manual ones
 
 ---
 
@@ -169,6 +197,8 @@ A working subscription plugin where:
 
 - [ ] End-to-end subscription purchase works
 - [ ] Automatic renewal processes without error
+- [ ] Free trials convert correctly
+- [ ] Manual subscription creation works
 - [ ] Zero critical bugs in core flow
 - [ ] All acceptance criteria from feature docs met
 - [ ] Performance: <2s subscription list load with 100 subscriptions

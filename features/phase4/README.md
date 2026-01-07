@@ -1,22 +1,18 @@
-# Phase 4: Premium & Specialized Features
+# Phase 4: Analytics, Migration & Premium Features
 
 ## 🎯 Goal
-Add **premium features** for specialized use cases: subscription bundles, installment payments, donations, gifting, split payments, migration tools, and developer APIs.
+Complete the plugin with **analytics, migration tools, donations, and feature entitlements** — making Array Subscription enterprise-ready.
 
 ---
 
-## 📦 Features Included
+## 📦 Features Included (4 features)
 
 | # | Feature File | Priority | Description |
 |---|--------------|----------|-------------|
-| 1 | [subscription-bundle.md](subscription-bundle.md) | **High** | Curated bundles, build-your-own boxes |
-| 2 | [installments.md](installments.md) | **Medium** | Pay for products in scheduled payments |
+| 1 | [reports-analytics.md](reports-analytics.md) | **High** | MRR/ARR, churn, analytics in WooCommerce |
+| 2 | [subscription-import-migration.md](subscription-import-migration.md) | **High** | WooCommerce Subscriptions migration, CSV import |
 | 3 | [donations.md](donations.md) | **Medium** | One-time & recurring donations |
-| 4 | [gifting-transfer-subscription.md](gifting-transfer-subscription.md) | **Medium** | Gift subscriptions, transfer ownership |
-| 5 | [split-payment.md](split-payment.md) | **Low** | Split subscription cost between people |
-| 6 | [subscription-import-migration.md](subscription-import-migration.md) | **High** | WooCommerce Subscriptions migration, CSV import |
-| 7 | [rest-api.md](rest-api.md) | **High** | Full REST API for integrations |
-| 8 | [feature-manager.md](feature-manager.md) | **Medium** | Define & display product entitlements |
+| 4 | [feature-manager.md](feature-manager.md) | **Medium** | Define & display product entitlements |
 
 ---
 
@@ -28,88 +24,25 @@ Add **premium features** for specialized use cases: subscription bundles, instal
 
 ## 🔧 Implementation Order
 
-### Step 1: Subscription Bundles
-1. **Cart/Checkout Settings**:
-   - Single subscription mode (one-click checkout)
-   - Multiple subscriptions mode (bundle at checkout)
-   - Skip cart option for subscriptions
-2. **Bundle Product Type**:
-   - Create subscription bundle product
-   - Define eligible products for bundle
-   - Min/max items configuration
-3. **Bundle Pricing**:
-   - Fixed price bundles
-   - Dynamic price (sum of components)
-   - Tiered pricing by size
-4. **Customer Bundle Customization**:
-   - Product selection interface
-   - Save preferences
-   - Modification window before cutoff
-5. **Renewal Behavior**:
-   - Same contents or allow changes
-   - Synchronized renewal for all items
-   - Single invoice for bundle
+### Step 1: Reports & Analytics
+1. Custom filters for WooCommerce Analytics:
+   - Initial orders
+   - Renewal orders
+   - Failed renewals
+2. Dedicated subscription reports section:
+   - MRR (Monthly Recurring Revenue)
+   - ARR (Annual Recurring Revenue)
+   - Active subscribers count
+   - Churn rate
+   - New vs churned
+3. Trend charts (MRR over time)
+4. Trial conversion rate report
+5. Payment recovery rate report
+6. Revenue by product breakdown
+7. Export reports to CSV
+8. Non-payers / outstanding dues report
 
-### Step 2: Installment Payments
-1. Product setting: "Enable Installments" (mutually exclusive with subscription)
-2. Configuration per product:
-   - Number of installments (2, 3, 4, 6, 12)
-   - Payment interval (weekly, bi-weekly, monthly)
-   - Optional fee (flat or percentage)
-   - Delivery timing (after 1st payment, all payments, or X payments)
-3. Checkout display:
-   - Full price vs installment comparison
-   - Payment schedule preview
-4. Installment tracking:
-   - Separate WooCommerce order per payment
-   - Link all orders to original purchase
-   - My Account installment view
-5. Early payoff option
-6. Failed payment handling
-
-### Step 3: Donations
-1. Product setting: "Enable Donation" (mutually exclusive)
-2. Predefined amount buttons ($10, $25, $50, $100)
-3. Custom amount with min/max validation
-4. One-time vs recurring donation toggle
-5. Recurring donation uses subscription billing
-6. Donor sees donation in My Account
-7. Standard WooCommerce order/receipt
-
-### Step 4: Gifting & Transfer
-1. **Gift Purchase**:
-   - "Buy as gift" toggle on product page
-   - Recipient email/name input
-   - Optional gift message
-   - Claim flow via email link
-   - Gift status tracking (pending/claimed)
-2. **Transfer Subscription**:
-   - Transfer from My Account or admin
-   - Recipient email verification
-   - Immediate or next renewal transfer
-   - Activity log entry
-   - Transfer limits (e.g., once per 90 days)
-3. **Payment Method Handling**:
-   - Keep original payer's method
-   - Or require recipient to add method
-
-### Step 5: Split Payment (Cost Sharing)
-1. Enable split for specific products
-2. Number of participants (2-10)
-3. Split types:
-   - Equal split
-   - Custom amounts
-   - Percentage split
-4. Invitation flow:
-   - Primary subscriber invites others
-   - Participants receive email with payment link
-   - Each completes their payment
-5. Separate WooCommerce orders per participant
-6. Renewal creates orders for all participants
-7. Status depends on all payments succeeding
-8. Handle partial payment scenarios
-
-### Step 6: Import & Migration
+### Step 2: Import & Migration
 1. **WooCommerce Subscriptions Migration**:
    - Auto-detect existing WCS data
    - Migration wizard with summary
@@ -126,29 +59,16 @@ Add **premium features** for specialized use cases: subscription bundles, instal
    - Error reporting
    - Skip invalid rows option
 
-### Step 7: REST API
-1. **Subscription Endpoints**:
-   - `GET /subscriptions` - List with filters
-   - `GET /subscriptions/{id}` - Single subscription
-   - `POST /subscriptions` - Create new
-   - `PUT /subscriptions/{id}` - Update
-   - `DELETE /subscriptions/{id}` - Cancel
-2. **Related Endpoints**:
-   - `GET /subscriptions/{id}/orders` - Related orders
-   - `GET /customers/{id}/subscriptions` - Customer's subscriptions
-3. **Action Endpoints**:
-   - `POST /subscriptions/{id}/pause`
-   - `POST /subscriptions/{id}/resume`
-   - `POST /subscriptions/{id}/renew`
-4. **Webhooks**:
-   - subscription.created
-   - subscription.updated
-   - subscription.cancelled
-   - subscription.renewed
-   - subscription.payment_failed
-5. Authentication via WooCommerce API keys
+### Step 3: Donations
+1. Product setting: "Enable Donation" (mutually exclusive)
+2. Predefined amount buttons ($10, $25, $50, $100)
+3. Custom amount with min/max validation
+4. One-time vs recurring donation toggle
+5. Recurring donation uses subscription billing
+6. Donor sees donation in My Account
+7. Standard WooCommerce order/receipt
 
-### Step 8: Feature Manager
+### Step 4: Feature Manager
 1. Product meta box: "Feature Manager" tab
 2. Feature table UI:
    - Feature name
@@ -166,53 +86,15 @@ Add **premium features** for specialized use cases: subscription bundles, instal
 
 ## ✅ Phase 4 Testing Checklist
 
-### Bundle Tests
-- [ ] Can create subscription bundle product
-- [ ] Eligible products configurable
-- [ ] Min/max items enforced
-- [ ] Customer can customize bundle contents
-- [ ] Bundle price calculates correctly
-- [ ] Modification cutoff works
-- [ ] All items renew together
-- [ ] Single renewal invoice generated
-- [ ] Cart bundling combines multiple subscriptions
-
-### Installment Tests
-- [ ] Can enable installments on product
-- [ ] Number of installments configurable
-- [ ] Fee calculates correctly
-- [ ] Checkout shows installment breakdown
-- [ ] Separate orders per payment
-- [ ] Orders linked together
-- [ ] My Account shows installment progress
-- [ ] Early payoff works
-- [ ] Failed payment handled appropriately
-
-### Donation Tests
-- [ ] Can create donation product
-- [ ] Predefined amounts display
-- [ ] Custom amount with validation
-- [ ] One-time donation creates order
-- [ ] Recurring donation creates subscription
-- [ ] Donor can cancel recurring from My Account
-
-### Gifting Tests
-- [ ] Gift toggle on product page
-- [ ] Recipient details captured
-- [ ] Invitation email sent
-- [ ] Recipient can claim gift
-- [ ] Gift status tracked
-- [ ] Transfer subscription works
-- [ ] Transfer limits enforced
-- [ ] Activity logged
-
-### Split Payment Tests
-- [ ] Can enable split for product
-- [ ] Invitation flow works
-- [ ] Each participant gets separate order
-- [ ] Renewal creates multiple orders
-- [ ] Subscription active when all paid
-- [ ] Handles partial payment scenarios
+### Reports Tests
+- [ ] WooCommerce Analytics filters by order type
+- [ ] MRR calculated correctly
+- [ ] ARR calculated correctly
+- [ ] Active subscriber count accurate
+- [ ] Churn rate calculates correctly
+- [ ] Trial conversion rate tracked
+- [ ] Reports export to CSV
+- [ ] Date range filtering works
 
 ### Import/Migration Tests
 - [ ] WCS migration detects existing data
@@ -225,16 +107,13 @@ Add **premium features** for specialized use cases: subscription bundles, instal
 - [ ] Validation catches errors
 - [ ] Batch processing works for large imports
 
-### REST API Tests
-- [ ] List subscriptions endpoint works
-- [ ] Single subscription endpoint works
-- [ ] Create subscription via API
-- [ ] Update subscription via API
-- [ ] Cancel subscription via API
-- [ ] Customer subscriptions endpoint works
-- [ ] Action endpoints (pause, resume, renew) work
-- [ ] Webhooks fire on events
-- [ ] Authentication required
+### Donation Tests
+- [ ] Can create donation product
+- [ ] Predefined amounts display
+- [ ] Custom amount with validation
+- [ ] One-time donation creates order
+- [ ] Recurring donation creates subscription
+- [ ] Donor can cancel recurring from My Account
 
 ### Feature Manager Tests
 - [ ] Can add features to product
@@ -249,26 +128,14 @@ Add **premium features** for specialized use cases: subscription bundles, instal
 ## 🏗️ Technical Components
 
 ### New Product Types/Settings
-- Subscription Bundle product type
-- Enable Installment checkbox
 - Enable Donation checkbox
-- Enable Gift toggle
-
-### New Post Types
-- `installment_plan` - Track installment schedules
-- `gift_subscription` - Track gift/claim status
 
 ### New Meta Fields
-- Bundle: `_bundle_contents`, `_eligible_products`, `_bundle_price_type`
-- Installment: `_installment_count`, `_installment_interval`, `_installment_fee`
-- Gift: `_gift_recipient_email`, `_gift_message`, `_gift_claimed`
-- Split: `_split_participants`, `_split_type`, `_split_amounts`
 - Features: `_product_features` (serialized array)
 
-### REST API
-- Extend WooCommerce REST API v3
-- Custom controllers for subscription endpoints
-- Webhook handlers
+### WooCommerce Analytics Integration
+- Custom data store for subscription metrics
+- Chart.js or similar for visualizations
 
 ### Migration System
 - Background processor for large migrations
@@ -281,25 +148,18 @@ Add **premium features** for specialized use cases: subscription bundles, instal
 
 The complete Array Subscription plugin with all premium features:
 
-1. **Subscription Boxes**: Build-your-own snack box with monthly customization
-2. **Buy Now Pay Later**: $1200 laptop in 6 monthly payments of $200
+1. **Business Insights**: MRR, churn, and conversion tracking in WooCommerce Analytics
+2. **Easy Migration**: Switch from WooCommerce Subscriptions in one click
 3. **Nonprofit**: Accept one-time and monthly donations
-4. **Gift Memberships**: Buy a year of Premium for a friend
-5. **Family Plans**: Split the $29/mo cost between 3 roommates
-6. **Easy Migration**: Switch from WooCommerce Subscriptions in one click
-7. **Integrations**: Full REST API for mobile apps, CRMs, and external systems
-8. **Entitlements**: Show customers exactly what features they get
+4. **Entitlements**: Show customers exactly what features they get with their plan
 
 ---
 
 ## 📈 Success Metrics
 
 - [ ] Migration preserves 100% of payment tokens
-- [ ] API endpoints respond < 500ms
-- [ ] Bundles handle 50+ eligible products
-- [ ] Installment tracking accurate across payments
-- [ ] Gift claim rate trackable
-- [ ] Split payment scenarios all resolve correctly
+- [ ] MRR/ARR reports match manual calculations
+- [ ] Donations process correctly (one-time and recurring)
 - [ ] Feature Manager displays correctly for complex setups
 
 ---
@@ -310,4 +170,3 @@ After Phase 4, Array Subscription is feature-complete and ready for:
 - Public release
 - AppSumo launch
 - Enterprise customers
-- Third-party integrations
