@@ -5,6 +5,28 @@ Accept one-time and recurring donations through WooCommerce. Supporters can choo
 
 **WooCommerce Integration:** Donations are processed as WooCommerce orders. Recurring donations create subscription-like billing using the same recurring payment system as subscriptions.
 
+### Supported WooCommerce Product Types
+
+WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **External/Affiliate**.
+
+| Product Type | Donation UI | Notes |
+|--------------|-------------|-------|
+| **Simple** | ✓ Full support | Enable Donation checkbox appears in product settings |
+| **Variable** | ✓ Full support | Per-variation donation settings available |
+| **Grouped** | ✗ No UI | Not supported for donations |
+| **External** | ✗ Not supported | External products are sold on other sites |
+
+### UI Placement in Product Data Meta Box
+
+All donation options are located in WooCommerce's **Product Data** meta box:
+
+| Product Type | UI Location |
+|--------------|-------------|
+| **Simple Products** | New tab appears **before the "Advanced" tab** in Product Data meta box |
+| **Variable Products** | Settings appear **inside each variation accordion** |
+
+> **Important:** Subscription, Installment, and Donation are **mutually exclusive** options. Only one can be enabled per product/variation.
+
 ### Product Type Selection
 On each WooCommerce product or variation, admin can select one of three mutually exclusive options:
 - **Enable Subscription** - Creates a recurring billing product (see [Subscription Products](subscription-products.md))

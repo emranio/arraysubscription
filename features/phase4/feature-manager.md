@@ -18,6 +18,17 @@ WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **Ex
 
 > **Note:** The Feature Manager UI is integrated into **Simple** and **Variable** products only. For grouped products, define features on the individual child products.
 
+### UI Placement in Product Data Meta Box
+
+Feature Manager options are located in WooCommerce's **Product Data** meta box:
+
+| Product Type | UI Location |
+|--------------|-------------|
+| **Simple Products** | "Feature Manager" tab appears **before the "Advanced" tab** in Product Data meta box |
+| **Variable Products** | Feature Manager settings appear **inside each variation accordion** |
+
+> **Note:** Feature Manager is **independent** of Subscription/Installment/Donation. You can add features to any Simple or Variable product, regardless of whether it's subscription-enabled.
+
 ---
 
 ## User Stories

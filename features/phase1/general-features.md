@@ -25,6 +25,38 @@ WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **Ex
 
 > **Summary:** Our plugin's UI (Subscription, Installment, Donation, Feature Manager) integrates with **Simple** and **Variable** products. **Grouped products** are supported for admin-created bundles (containing subscription items as children). For customer-created bundles, see [Subscription Bundle](../phase3/subscription-bundle.md).
 
+### UI Placement in WooCommerce
+
+All Array Subscription options are located in WooCommerce's **Product Data** meta box:
+
+| Product Type | UI Location |
+|--------------|-------------|
+| **Simple Products** | New tabs appear **before the "Advanced" tab** in Product Data meta box |
+| **Variable Products** | Settings appear **inside each variation accordion** |
+
+```
+Product Data Meta Box (Simple Product)
+├── General
+├── Inventory
+├── Shipping
+├── Linked Products
+├── Attributes
+├── ⭐ Subscription/Installment/Donation  ← Array Subscription tab
+├── ⭐ Feature Manager                     ← Array Subscription tab
+├── Advanced
+└── ...
+
+Product Data Meta Box (Variable Product)
+├── General
+├── Inventory
+├── ...
+└── Variations
+    └── Variation #1 (accordion)
+        ├── Standard variation fields...
+        ├── ⭐ Subscription/Installment/Donation settings
+        └── ⭐ Feature Manager settings
+```
+
 ### Order System Integration
 - All subscription orders (initial and renewals) are WooCommerce orders
 - Standard WooCommerce checkout flow for subscription purchases

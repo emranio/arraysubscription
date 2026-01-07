@@ -18,6 +18,17 @@ WooCommerce has 4 product types: **Simple**, **Variable**, **Grouped**, and **Ex
 
 > **Note:** The installment UI is integrated into **Simple** and **Variable** products only.
 
+### UI Placement in Product Data Meta Box
+
+All installment options are located in WooCommerce's **Product Data** meta box:
+
+| Product Type | UI Location |
+|--------------|-------------|
+| **Simple Products** | New tab appears **before the "Advanced" tab** in Product Data meta box |
+| **Variable Products** | Settings appear **inside each variation accordion** |
+
+> **Important:** Subscription, Installment, and Donation are **mutually exclusive** options. Only one can be enabled per product/variation.
+
 ### Product Type Selection
 On each WooCommerce product or variation, admin can select one of three mutually exclusive options:
 - **Enable Subscription** - Creates a recurring billing product (see [Subscription Products](subscription-products.md))
