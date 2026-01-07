@@ -2,7 +2,7 @@
 
 ## Overview
 Automated email notifications to keep customers and admins informed about subscription events, payment status, and important actions throughout the subscription lifecycle.
-**marked as in-house**
+
 
 **WooCommerce Integration:** Uses WooCommerce's native email system and templates. All subscription emails follow WooCommerce email styling and can be customized using WooCommerce's email settings.
 

@@ -60,3 +60,59 @@ Allow customers (and admins) to skip the next renewal cycle without cancelling t
 - [ ] Skip limits and cutoff rules configurable
 - [ ] Skipped renewal is visible in subscription timeline/activity log
 - [ ] Reports can identify skipped cycles
+
+---
+
+## Pause & Resume Subscriptions
+
+Pause functionality is distinct from skipping: the subscription is temporarily suspended entirely rather than skipping just one billing cycle.
+
+### Customer Pause Functionality
+- Customers can pause subscriptions temporarily from My Account
+- Admin configurable: enable/disable pause feature globally or per-product
+- Limit number of pauses allowed per subscription
+- Set maximum pause duration (e.g., max 30 days)
+- Automatic resume after pause period expires
+
+### Admin Pause Controls
+- Admin can pause subscriptions on behalf of customers
+- Override pause limits when necessary
+- Set custom pause duration
+- View pause history in subscription activity log
+
+### Pause Behavior
+- **No Charges**: No billing during pause period
+- **End Date Extension**: Subscription end date extended by pause duration
+- **Access Control**: Choose whether access continues or suspends during pause
+- **Resume Options**: Resume manually by customer/admin or automatically after pause period
+
+### Pause vs Skip Comparison
+
+| Aspect | Skip Next Renewal | Pause Subscription |
+|--------|-------------------|-------------------|
+| Duration | One billing cycle | Configurable period |
+| Subscription Status | Active | Paused |
+| Access | Continues normally | Configurable (continue/suspend) |
+| Billing | Skips one payment | No payments until resumed |
+| End Date | Shifts by one interval | Extended by pause duration |
+
+### Pause Limits & Rules
+- Global enable/disable pause feature
+- Per-product pause enable/disable
+- Maximum number of pauses per subscription
+- Minimum time between pauses
+- Maximum pause duration limit
+- Require reason for pausing (optional)
+
+### Pause Acceptance Criteria
+
+- [ ] Customer can pause subscription from My Account (if enabled)
+- [ ] Admin can pause subscription from subscription details
+- [ ] Pause duration is configurable with maximum limit
+- [ ] Subscription status changes to "Paused"
+- [ ] No charges processed during pause period
+- [ ] Subscription end date extended by pause duration
+- [ ] Customer can resume subscription manually
+- [ ] Subscription auto-resumes after max pause duration
+- [ ] Pause history visible in subscription activity log
+- [ ] Pause limits and rules are configurable per-product

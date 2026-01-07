@@ -2,7 +2,7 @@
 
 ## Overview
 This plugin extends WooCommerce's native My Account customer panel by adding dedicated subscription management pages. Customers access their subscriptions through additional tabs/pages within the existing WooCommerce My Account area—no separate login or interface required.
-**marked as in-house**
+
 
 
 **Implementation:** New pages and tabs are injected into WooCommerce's standard customer account dashboard, maintaining consistent branding and user experience with the rest of WooCommerce.

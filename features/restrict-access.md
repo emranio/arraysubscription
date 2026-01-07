@@ -121,7 +121,53 @@ Behavior options:
 > Implementation note (for dev): WordPress media can be accessed via attachment pages and also direct file URLs. Minimum viable restriction is enforcing eligibility on **attachment pages and generated download links**, with optional “protected downloads” mode for direct URLs.
 
 ---
-### Payment Method Restrictions
+### Downloadable Products (Digital Subscriptions)
+
+Control access to WooCommerce downloadable products based on subscription status.
+
+#### Features
+- **Access Control**: Grant/revoke download access based on subscription status
+- **Revoke on Cancellation**: Automatically remove download access when subscription is cancelled
+- **Revoke on Expiry**: Remove download access when subscription expires
+- **Restore on Reactivation**: Re-enable downloads when subscription is reactivated
+
+#### Download Limits
+- **Per-Period Limits**: Limit downloads per billing period (e.g., 5 downloads/month)
+- **Reset on Renewal**: Download count resets at each renewal
+- **Unlimited Option**: No limits for certain subscription tiers
+
+#### Download Access Rules
+| Subscription Status | Download Access |
+|---------------------|-----------------|
+| Active | Full access |
+| Trial | Configurable (grant or restrict) |
+| On-Hold | Suspended |
+| Paused | Configurable (continue or suspend) |
+| Cancelled | Revoked |
+| Expired | Revoked |
+
+#### Product Configuration
+- Enable downloadable files on subscription products
+- Configure download limit per billing period
+- Set expiration for download links (optional)
+- Tier-based download access (higher tiers = more downloads)
+
+#### Customer Experience
+- Download links visible in My Account when subscription is active
+- Clear messaging when downloads are unavailable
+- Download count remaining displayed (if limits apply)
+
+#### Downloadable Products Acceptance Criteria
+
+- [ ] Download access granted when subscription becomes active
+- [ ] Download access revoked when subscription is cancelled/expired
+- [ ] Download access restored when subscription is reactivated
+- [ ] Per-period download limits configurable
+- [ ] Download count resets on each renewal
+- [ ] Clear indication of remaining downloads in My Account
+- [ ] Access control respects subscription status changes
+
+---### Payment Method Restrictions
 Control which payment methods are available for subscription products at checkout.
 
 #### Features

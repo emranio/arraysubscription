@@ -148,6 +148,46 @@ When subscriptions are synced to a specific day (e.g., 1st of month) and a plan 
 - [ ] Customer sees preview of charges before confirming
 - [ ] Plan change can be immediate or at next renewal
 - [ ] Subscription history maintained through plan change
+
+---
+
+## Subscription Quantity Changes
+
+Allow customers and admins to adjust the quantity of items in a subscription without cancelling and resubscribing.
+
+### Quantity Adjustment Features
+- **Increase Quantity**: Add more items to an existing subscription
+- **Decrease Quantity**: Remove items from subscription (with minimums)
+- **Admin Override**: Admin can change quantity regardless of customer limits
+- **Quantity Limits**: Configure minimum and maximum quantities per subscription product
+
+### Proration for Quantity Changes
+- **Prorate Immediately**: Calculate difference for remaining period
+- **Apply at Renewal**: New quantity/price starts at next billing cycle
+- **No Proration**: Full new price charged immediately
+
+### Quantity Change Rules
+- Set minimum quantity (e.g., at least 1)
+- Set maximum quantity (e.g., no more than 10)
+- Allow only specific quantity increments (e.g., multiples of 5)
+- Restrict quantity changes within X days of renewal
+
+### Quantity Change Proration Example
+- Current: 2 items × $10/month = $20/month (15 days remaining)
+- New: 5 items × $10/month = $50/month
+- Credit: $10 (half month of 2 items)
+- Charge: $25 (half month of 5 items)
+- Net Charge: $15
+
+### Quantity Change Acceptance Criteria
+
+- [ ] Customer can increase subscription quantity from My Account
+- [ ] Customer can decrease subscription quantity (respecting minimums)
+- [ ] Admin can set min/max quantity limits per product
+- [ ] Proration calculated correctly for quantity changes
+- [ ] Quantity changes reflected in next renewal order
+- [ ] Activity log records quantity changes
+
 - [ ] Email notification sent on plan change
 - [ ] WooCommerce order created for upgrade/crossgrade charges
 - [ ] Credits applied for downgrades (or refunded)

@@ -37,41 +37,18 @@ Additional fields injected into WooCommerce's native coupon settings:
 
 ---
 
-## Pause & Resume Subscriptions
+## Cross-References to Detailed Feature Documents
 
-### Customer Pause Functionality
-- Customers can pause subscriptions temporarily
-- Admin configurable: enable/disable pause feature
-- Limit number of pauses allowed
-- Set maximum pause duration
-- Automatic resume after pause period
+Several features have been expanded into dedicated documents for comprehensive coverage:
 
-### Pause Behavior
-- No charges during pause period
-- Subscription end date extended by pause duration
-- Access can continue or be suspended during pause
-- Resume manually or automatically
-
----
-
-## Subscription Quantity Changes
-
-### Quantity Adjustments
-- Allow customers to change subscription quantity
-- Increase or decrease number of items
-- Proration options for quantity changes
-- Quantity limits (min/max)
-
----
-
-## Shipping Features
-
-### Subscription Shipping
-- Calculate shipping for physical subscription products
-- Different shipping for initial vs renewal orders
-- One-time shipping fee option (charge only on first order)
-- Recurring shipping calculations
-- Update shipping address per subscription
+| Feature | Document |
+|---------|----------|
+| Pause & Resume Subscriptions | [Skip Next Renewal / Vacation Mode](skip-next-renewal-vacation-mode.md) |
+| Subscription Quantity Changes | [Upgrades, Downgrades & Crossgrades](upgrade-downgrade-crossgrade.md) |
+| Shipping for Subscriptions | [Subscription Shipping](shipping-subscriptions.md) |
+| Downloadable Products | [Restrict Access](restrict-access.md) |
+| REST API | [REST API](rest-api.md) |
+| Multi-Currency | [Multi-Currency Support](multi-currency.md) |
 
 ---
 
@@ -85,26 +62,6 @@ Additional fields injected into WooCommerce's native coupon settings:
 - Limit subscriptions per product per customer
 - Limit total subscriptions per customer
 - Allow one active subscription per product
-
----
-
-## Downloadable Products
-
-### Digital Subscriptions
-- Support for downloadable/digital subscription products
-- Access control based on subscription status
-- Revoke download access on cancellation/expiry
-- Download limits per billing period
-
----
-
-## REST API Support
-
-### API Endpoints
-- Get subscription details via REST API
-- Retrieve subscriptions by customer
-- Access subscription status and payment history
-- Integration with external systems
 
 ---
 
@@ -148,15 +105,6 @@ Additional fields injected into WooCommerce's native coupon settings:
 - Track subscription status changes
 - Log payment attempts
 - Record admin actions on subscriptions
-
----
-
-## Multi-Currency Support
-
-### Currency Handling
-- Support for WooCommerce multi-currency plugins
-- Subscription pricing in multiple currencies
-- Currency conversion for renewals
 
 ---
 
@@ -244,12 +192,19 @@ Additional fields injected into WooCommerce's native coupon settings:
 
 - [ ] WooCommerce is required dependency
 - [ ] HPOS compatibility
-- [ ] Pause/resume functionality
-- [ ] Download access control for digital subscriptions
-- [ ] REST API endpoints functional
 - [ ] Shortcodes and blocks available
 - [ ] Error logging system
 - [ ] Staging mode detection
-- [ ] Multi-currency plugin compatibility
 - [ ] Translation ready
 - [ ] Secure token storage
+- [ ] Multiple subscriptions in cart supported
+- [ ] Per-customer subscription limits configurable
+- [ ] User account required for subscriptions
+
+> **Note:** Additional acceptance criteria for moved features are located in their respective documents:
+> - Pause/Resume: [skip-next-renewal-vacation-mode.md](skip-next-renewal-vacation-mode.md)
+> - Quantity Changes: [upgrade-downgrade-crossgrade.md](upgrade-downgrade-crossgrade.md)
+> - Shipping: [shipping-subscriptions.md](shipping-subscriptions.md)
+> - Download Access: [restrict-access.md](restrict-access.md)
+> - REST API: [rest-api.md](rest-api.md)
+> - Multi-Currency: [multi-currency.md](multi-currency.md)

@@ -2,7 +2,7 @@
 
 ## Overview
 Define and display product features/entitlements on any WooCommerce product. Admins configure features in a table-like UI on the product edit page, and customers see their entitled features in their My Account panel based on their active subscriptions or purchases.
-**marked as in-house**
+
 
 **WooCommerce Integration:** Feature Manager adds a new meta box to WooCommerce's product edit screen. Features are stored as product meta and displayed in the customer's WooCommerce My Account area.
 
