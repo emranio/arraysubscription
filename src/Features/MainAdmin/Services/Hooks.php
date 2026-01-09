@@ -14,6 +14,7 @@ namespace ArraySubscription\Features\MainAdmin\Services;
 
 use ArraySubscription\Supports\Assets;
 use \ArraySubscription\Supports\Config;
+use ArraySubscription\Features\MainAdmin\Services\MenuConfig;
 
 if (! defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -77,6 +78,11 @@ class Hooks
             $asset['version'],
             true
         );
+
+        // Pass menu config to JavaScript
+        wp_localize_script('arraysubscription-mainadmin', 'arraySubscriptionMenu', [
+            'items' => MenuConfig::getMenuItems(),
+        ]);
     }
 
     /**
@@ -98,13 +104,23 @@ class Hooks
             30
         );
 
-        add_submenu_page(
-            $this->menu_slug,
-            esc_html__('Settings', 'arraysubscription'),
-            esc_html__('Settings', 'arraysubscription'),
-            $this->capability,
-            $this->menu_slug
-        );
+        // Register submenus from MenuConfig
+        $menuItems = MenuConfig::getMenuItems();
+        foreach ($menuItems as $item) {
+            $path = $item['path'] ?? ($item['children'][0]['path'] ?? '/');
+            
+            add_submenu_page(
+                $this->menu_slug,
+                esc_html($item['title']),
+                esc_html($item['title']),
+                $this->capability,
+                $this->menu_slug . '#' . $path,
+                [$this, 'render']
+            );
+        }
+
+        // Remove the duplicate first submenu created by add_menu_page
+        remove_submenu_page($this->menu_slug, $this->menu_slug);
     }
 
     /**
