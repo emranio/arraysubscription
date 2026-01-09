@@ -11,8 +11,8 @@ import ReactDOM from "react-dom/client";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { __ } from "@wordpress/i18n";
 import "./scss/main/index.scss";
-import Sidebar from "./components/Sidebar.jsx";
 import { PageSkeleton } from "@libs/skeleton";
+import TopHeader from "./components/TopHeader.jsx";
 
 // Lazy load pages
 const Dashboard = lazy(() => import("./pages/Dashboard.jsx"));
@@ -29,7 +29,7 @@ const TestTaxonomyForm = lazy(() => import("./pages/TestTaxonomyForm.jsx"));
 const MainContent = () => {
   return (
     <div className="arraysubscription-main-layout">
-      <Sidebar />
+      <TopHeader />
       <main className="arraysubscription-main-content">
         <Suspense fallback={<PageSkeleton hasHeader={true} cards={3} />}>
           <Routes>
