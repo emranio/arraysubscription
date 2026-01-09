@@ -4,33 +4,6 @@
 $dark: #101010;
 $light: #e0e0e0;
 
-$chat-primary: #3858e9;
-$chat-primary-hover: #2845d6;
-$chat-secondary: #808080;
-$chat-secondary-hover: #6a6a6a;
-
-$chat-bg: #ffffff;
-$chat-surface: #f8f9fa;
-$chat-border: #dee2e6;
-$chat-text: $dark;
-$chat-text-muted: #949494;
-$chat-danger: #dc3545;
-$chat-danger-hover: #c82333;
-$chat-success: #28a745;
-
-// User message (right side)
-$user-message-bg: rgba($chat-primary, 1);
-$user-message-text: #ffffff;
-
-// AI message (left side)
-$ai-message-bg: $chat-surface;
-$ai-message-text: $chat-text;
-
-// app ui
-$sidebar-bg: $dark;
-$sidebar-text: $light;
-$sidebar-text-muted: $chat-text-muted;
-
 // Spacing
 $spacing-xxs: 2px;
 $spacing-xs: 5px;
@@ -38,8 +11,6 @@ $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 32px;
-
-$sidebar-spacing: 12px;
 
 // Border radius
 $radius-xs: 2px;
