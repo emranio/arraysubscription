@@ -1,0 +1,57 @@
+{
+	"name": "emranio/scoper-plugin",
+	"description": "A phpcs and scoper based boilerplate generator ",
+	"scripts": {
+		"scoped": [
+			"vendor/bin/php-scoper add-prefix --output-dir temp --force",
+			"composer dump-autoload -d temp --optimize",
+			"node workflow-scripts/move-vendor-prefixed.js",
+			"node workflow-scripts/optimize-vendor.js"
+		],
+		"scoped-install": [
+			"rm -rf vendor-prefixed",
+			"composer install",
+			"composer bin php-scoper require --dev humbug/php-scoper",
+			"composer install --no-cache --no-dev --optimize-autoloader",
+			"composer scoped"
+		],
+		"phpcs": [
+			"vendor/bin/phpcs"
+		],
+		"phpcs:fix": [
+			"vendor/bin/phpcbf"
+		]
+	},
+	"require": {
+		"php": ">=8.2",
+		"sniccowp/php-scoper-wordpress-excludes": "^6.8",
+		"jamesgober/config": "^1.0"
+	},
+	"require-dev": {
+		"bamarni/composer-bin-plugin": "^1.5",
+		"squizlabs/php_codesniffer": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wp-coding-standards/wpcs": "*"
+	},
+	"platform": {
+		"php": "8.2"
+	},
+	"config": {
+		"vendor-dir": "vendor",
+		"allow-plugins": {
+			"bamarni/composer-bin-plugin": true,
+			"kylekatarnls/update-helper": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"extra": {
+		"bamarni-bin": {
+			"target-directory": "vendor/vendor-bin"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"ArraySubscription\\": "src"
+		}
+	}
+}

@@ -1,0 +1,418 @@
+{
+    "packages": [
+        {
+            "name": "jamesgober\/config",
+            "version": "v1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/jamesgober\/Config.git",
+                "reference": "b4b8da7bc221c953d2a637b13ec4debd23b08a35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/jamesgober\/Config\/zipball\/b4b8da7bc221c953d2a637b13ec4debd23b08a35",
+                "reference": "b4b8da7bc221c953d2a637b13ec4debd23b08a35",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-xml": "*",
+                "php": ">=8.2",
+                "psr\/http-message": "^2.0",
+                "symfony\/yaml": "^7.1"
+            },
+            "require-dev": {
+                "phpstan\/phpstan": "^1.9",
+                "phpstan\/phpstan-deprecation-rules": "^1.0",
+                "phpstan\/phpstan-strict-rules": "^1.4",
+                "phpunit\/phpunit": "^10.5.17"
+            },
+            "time": "2024-12-06T00:00:00+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ArraySubscriptionVendors\\JG\\Config\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Gober",
+                    "email": "me@jamesgober.com",
+                    "homepage": "https:\/\/jamesgober.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Advanced PHP configuration management designed for flexibility and performance, with built-in support for JSON, YAML, XML, INI, and limitless custom formats.",
+            "homepage": "https:\/\/github.com\/jamesgober\/Config",
+            "keywords": [
+                "Settings",
+                "config",
+                "configuration",
+                "configuration-manager",
+                "json",
+                "loader",
+                "parser",
+                "php",
+                "psr",
+                "settings-management",
+                "xml",
+                "yaml"
+            ],
+            "support": {
+                "docs": "https:\/\/github.com\/jamesgober\/Config#readme",
+                "issues": "https:\/\/github.com\/jamesgober\/Config\/issues",
+                "source": "https:\/\/github.com\/jamesgober\/Config"
+            },
+            "install-path": "..\/jamesgober\/config"
+        },
+        {
+            "name": "psr\/http-message",
+            "version": "2.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/php-fig\/http-message.git",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/php-fig\/http-message\/zipball\/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "time": "2023-04-04T09:54:51+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ArraySubscriptionVendors\\Psr\\Http\\Message\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https:\/\/www.php-fig.org\/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https:\/\/github.com\/php-fig\/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https:\/\/github.com\/php-fig\/http-message\/tree\/2.0"
+            },
+            "install-path": "..\/psr\/http-message"
+        },
+        {
+            "name": "sniccowp\/php-scoper-wordpress-excludes",
+            "version": "6.9.0",
+            "version_normalized": "6.9.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes.git",
+                "reference": "40ab73f3def963304e23e44596baf49441f00512"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/snicco\/php-scoper-wordpress-excludes\/zipball\/40ab73f3def963304e23e44596baf49441f00512",
+                "reference": "40ab73f3def963304e23e44596baf49441f00512",
+                "shasum": ""
+            },
+            "require-dev": {
+                "php": "^7.4",
+                "php-stubs\/wordpress-globals": "0.2.0",
+                "php-stubs\/wordpress-stubs": "6.9.0",
+                "sniccowp\/php-scoper-excludes": "dev-master"
+            },
+            "time": "2025-12-08T11:39:50+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Calvin Alkan",
+                    "email": "calvin@snicco.de"
+                },
+                {
+                    "name": "Marlon Alkan",
+                    "email": "marlon@snicco.de"
+                }
+            ],
+            "description": "A list of all WordPress core classes, functions and constants. Meant to be used with the PHP-Scoper exclusion functionality.",
+            "keywords": [
+                "php-scoper",
+                "scoping WordPress",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes\/issues",
+                "source": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes\/tree\/6.9.0"
+            },
+            "install-path": "..\/sniccowp\/php-scoper-wordpress-excludes"
+        },
+        {
+            "name": "symfony\/deprecation-contracts",
+            "version": "v3.6.0",
+            "version_normalized": "3.6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/symfony\/deprecation-contracts.git",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/deprecation-contracts\/zipball\/63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "time": "2024-09-25T14:21:43+00:00",
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https:\/\/github.com\/symfony\/contracts",
+                    "name": "symfony\/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.6-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https:\/\/symfony.com\/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https:\/\/symfony.com",
+            "support": {
+                "source": "https:\/\/github.com\/symfony\/deprecation-contracts\/tree\/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/symfony.com\/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https:\/\/github.com\/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/tidelift.com\/funding\/github\/packagist\/symfony\/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "..\/symfony\/deprecation-contracts"
+        },
+        {
+            "name": "symfony\/polyfill-ctype",
+            "version": "v1.33.0",
+            "version_normalized": "1.33.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/symfony\/polyfill-ctype.git",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/polyfill-ctype\/zipball\/a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-ctype": "*"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "time": "2024-09-09T11:45:10+00:00",
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https:\/\/github.com\/symfony\/polyfill",
+                    "name": "symfony\/polyfill"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "ArraySubscriptionVendors\\Symfony\\Polyfill\\Ctype\\": ""
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https:\/\/symfony.com\/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https:\/\/symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "support": {
+                "source": "https:\/\/github.com\/symfony\/polyfill-ctype\/tree\/v1.33.0"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/symfony.com\/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https:\/\/github.com\/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/github.com\/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/tidelift.com\/funding\/github\/packagist\/symfony\/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "..\/symfony\/polyfill-ctype"
+        },
+        {
+            "name": "symfony\/yaml",
+            "version": "v7.4.1",
+            "version_normalized": "7.4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/symfony\/yaml.git",
+                "reference": "24dd4de28d2e3988b311751ac49e684d783e2345"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/yaml\/zipball\/24dd4de28d2e3988b311751ac49e684d783e2345",
+                "reference": "24dd4de28d2e3988b311751ac49e684d783e2345",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony\/deprecation-contracts": "^2.5|^3",
+                "symfony\/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony\/console": "<6.4"
+            },
+            "require-dev": {
+                "symfony\/console": "^6.4|^7.0|^8.0"
+            },
+            "time": "2025-12-04T18:11:45+00:00",
+            "bin": [
+                "Resources\/bin\/yaml-lint"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ArraySubscriptionVendors\\Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "\/Tests\/"
+                ]
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https:\/\/symfony.com\/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https:\/\/symfony.com",
+            "support": {
+                "source": "https:\/\/github.com\/symfony\/yaml\/tree\/v7.4.1"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/symfony.com\/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https:\/\/github.com\/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/github.com\/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/tidelift.com\/funding\/github\/packagist\/symfony\/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "..\/symfony\/yaml"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

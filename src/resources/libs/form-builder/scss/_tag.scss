@@ -1,0 +1,49 @@
+// Tag Input Styles
+
+.arraysubscription-fb-tag-input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--arraysubscription-fb-spacing-xs);
+  padding: 4px;
+  border: 1px solid var(--arraysubscription-fb-border-color);
+  border-radius: var(--arraysubscription-fb-border-radius);
+  background-color: var(--arraysubscription-fb-bg-color);
+  min-height: var(--arraysubscription-fb-input-height);
+  align-items: center;
+
+  &:focus-within {
+    border-color: var(--arraysubscription-fb-focus-color);
+    box-shadow: var(--arraysubscription-fb-focus-shadow);
+  }
+
+  .arraysubscription-fb-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background-color: var(--arraysubscription-fb-primary-color);
+    color: #fff;
+    border-radius: var(--arraysubscription-fb-border-radius);
+    font-size: 13px;
+
+    .arraysubscription-fb-tag-remove {
+      cursor: pointer;
+      margin-left: 4px;
+      font-weight: bold;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  input {
+    flex: 1;
+    min-width: 120px;
+    border: none;
+    outline: none;
+    padding: 4px;
+    font-size: var(--arraysubscription-fb-font-size);
+    background: transparent;
+  }
+}

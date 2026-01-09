@@ -1,0 +1,342 @@
+// Unified Select Field Styles - WordPress-like appearance
+
+.arraysubscription-fb-select {
+  position: relative;
+  width: 100%;
+  padding: 0 !important;
+  border: 0 !important;
+
+  // Disabled state
+  &--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+
+    .arraysubscription-fb-select-control {
+      background-color: var(--arraysubscription-fb-disabled-bg);
+      cursor: not-allowed;
+    }
+  }
+
+  // Control (main clickable area)
+  &-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--arraysubscription-fb-input-height);
+    padding: 0 8px;
+    background-color: var(--arraysubscription-fb-bg-color);
+    border: 1px solid #8c8f94;
+    border-radius: var(--arraysubscription-fb-border-radius);
+    cursor: pointer;
+    transition: border-color 0.1s, box-shadow 0.1s;
+
+    &:hover {
+      border-color: var(--arraysubscription-fb-primary-color);
+    }
+
+    &--open {
+      border-color: var(--arraysubscription-fb-focus-color);
+      box-shadow: 0 0 0 1px var(--arraysubscription-fb-focus-color);
+    }
+  }
+
+  // Value container
+  &-value {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-height: 24px;
+    padding: 2px 0;
+  }
+
+  // Placeholder text
+  &-placeholder {
+    color: var(--arraysubscription-fb-text-muted);
+    font-size: 13px;
+  }
+
+  // Single value display
+  &-single-value {
+    font-size: 13px;
+    color: var(--arraysubscription-fb-text-color);
+  }
+
+  // Tags container (multi-select)
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  // Individual tag (WordPress tag style)
+  &-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 6px;
+    height: 22px;
+    background-color: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 1;
+    color: #2c3338;
+
+    &-label {
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-remove {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      margin-left: 2px;
+      border-radius: 2px;
+      color: #646970;
+      cursor: pointer;
+      transition: background-color 0.1s, color 0.1s;
+
+      &:hover {
+        background-color: #d63638;
+        color: #fff;
+      }
+    }
+  }
+
+  // Indicators (clear, chevron)
+  &-indicators {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 4px;
+  }
+
+  &-clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    color: #646970;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.1s, color 0.1s;
+
+    &:hover {
+      background-color: #d63638;
+      color: #fff;
+    }
+  }
+
+  &-chevron {
+    color: #646970;
+    transition: transform 0.2s;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Dropdown panel
+  &-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background-color: var(--arraysubscription-fb-bg-color);
+    border: 1px solid #c3c4c7;
+    border-radius: var(--arraysubscription-fb-border-radius);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: arraysubscription-fb-select-dropdown-fade 0.15s ease;
+  }
+
+  // Search input
+  &-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-bottom: 1px solid #dcdcde;
+
+    &-icon {
+      color: #646970;
+      flex-shrink: 0;
+    }
+
+    &-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 13px;
+      background: transparent;
+      color: var(--arraysubscription-fb-text-color);
+
+      &::placeholder {
+        color: var(--arraysubscription-fb-text-muted);
+      }
+    }
+  }
+
+  // Options container
+  &-options {
+    max-height: 200px;
+    overflow-y: auto;
+
+    // WordPress-like scrollbar
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f0f0f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c3c4c7;
+      border-radius: 3px;
+
+      &:hover {
+        background: #a7aaad;
+      }
+    }
+  }
+
+  // Option item
+  &-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: #f0f0f1;
+    }
+
+    &--selected {
+      background-color: #f0f7fc;
+
+      &:hover {
+        background-color: #e5f1f9;
+      }
+
+      .arraysubscription-fb-select-option-label {
+        color: var(--arraysubscription-fb-primary-color);
+        font-weight: 500;
+      }
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &-checkbox {
+      display: flex;
+      align-items: center;
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        cursor: pointer;
+        accent-color: var(--arraysubscription-fb-primary-color);
+      }
+    }
+
+    &-label {
+      flex: 1;
+      font-size: 13px;
+      color: var(--arraysubscription-fb-text-color);
+    }
+  }
+
+  // Group styles
+  &-group {
+    &-label {
+      padding: 8px 12px 4px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #646970;
+      letter-spacing: 0.5px;
+    }
+
+    &-options {
+      .arraysubscription-fb-select-option {
+        padding-left: 20px;
+      }
+    }
+
+    & + & {
+      border-top: 1px solid #dcdcde;
+      margin-top: 4px;
+      padding-top: 4px;
+    }
+  }
+
+  // Loading state
+  &-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    color: var(--arraysubscription-fb-text-muted);
+    font-size: 13px;
+  }
+
+  &-spinner {
+    animation: arraysubscription-fb-select-spin 1s linear infinite;
+  }
+
+  // Error state
+  &-error {
+    padding: 12px;
+    color: var(--arraysubscription-fb-error-color);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  // No options
+  &-no-options {
+    padding: 12px;
+    color: var(--arraysubscription-fb-text-muted);
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+// Animations
+@keyframes arraysubscription-fb-select-dropdown-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arraysubscription-fb-select-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

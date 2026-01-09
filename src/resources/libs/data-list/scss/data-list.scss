@@ -1,0 +1,86 @@
+@import "./variable.scss";
+@import "./table.scss";
+@import "./header.scss";
+@import "./pagination.scss";
+@import "./card.scss";
+
+// Media Gallery Styles
+.arraysubscription-dl-media-gallery {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+
+  &__thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+  }
+}
+
+// Tag Styles
+.arraysubscription-dl-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.arraysubscription-dl-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #fff;
+
+  &--publish {
+    background-color: #2271b1;
+  }
+
+  &--draft {
+    background-color: #dba617;
+  }
+
+  &--trash {
+    background-color: #d63638;
+  }
+
+  &--pending {
+    background-color: #996800;
+  }
+
+  &--default {
+    background-color: #666;
+  }
+}
+
+// Empty state
+.arraysubscription-dl-empty {
+  color: #999;
+  font-size: 12px;
+}
+
+// Date column
+.arraysubscription-dl-date {
+  &__label {
+    color: #666;
+    font-size: 12px;
+  }
+
+  &__value {
+    color: #333;
+  }
+}
+
+// Loading state
+.arraysubscription-dl-loading {
+  color: #999;
+  font-size: 12px;
+}

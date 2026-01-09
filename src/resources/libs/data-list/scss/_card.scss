@@ -1,0 +1,284 @@
+// Card Grid Layout
+.arraysubscription-dl-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+// Responsive Grid
+@media (max-width: 1400px) {
+  .arraysubscription-dl-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .arraysubscription-dl-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .arraysubscription-dl-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Card Item - Horizontal Layout
+.arraysubscription-dl-card {
+  background: var(--arraysubscription-dl-color-bg-white);
+  border: 1px solid var(--arraysubscription-dl-color-border-medium);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 2px var(--arraysubscription-dl-shadow-subtle);
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+
+  &:hover {
+    border-color: var(--arraysubscription-dl-color-border-dark, #c3c4c7);
+    box-shadow: 0 4px 12px var(--arraysubscription-dl-shadow-medium);
+  }
+
+  // Clickable card style
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--arraysubscription-dl-color-primary);
+    }
+  }
+}
+
+// Thumbnail - Left Side (Full Height)
+.arraysubscription-dl-card-thumbnail {
+  flex-shrink: 0;
+  width: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: stretch;
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  // Placeholder when no image
+  .arraysubscription-dl-featured-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--arraysubscription-dl-color-bg-hover-alt, #f6f7f7);
+    border-radius: 6px;
+    color: var(--arraysubscription-dl-color-text-tertiary);
+  }
+}
+
+// Content - Right Side
+.arraysubscription-dl-card-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding-right: 24px; // Space for actions menu
+}
+
+// Title Row (Title + Status inline)
+.arraysubscription-dl-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.arraysubscription-dl-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  a,
+  span {
+    color: var(--arraysubscription-dl-color-text-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--arraysubscription-dl-color-primary);
+  }
+}
+
+.arraysubscription-dl-card-status {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  background: var(--arraysubscription-dl-color-bg-hover-alt, #f0f0f0);
+  color: var(--arraysubscription-dl-color-text-tertiary);
+
+  &--draft {
+    background: #fef3cd;
+    color: #856404;
+  }
+
+  &--trash {
+    background: #f8d7da;
+    color: #721c24;
+  }
+}
+
+// Date
+.arraysubscription-dl-card-date {
+  font-size: 12px;
+  color: var(--arraysubscription-dl-color-text-tertiary);
+  line-height: 1.4;
+}
+
+// Description - 2 lines max
+.arraysubscription-dl-card-description {
+  font-size: 13px;
+  color: var(--arraysubscription-dl-color-text-secondary);
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+// Actions Menu - Positioned Top Right
+.arraysubscription-dl-card-actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  flex-shrink: 0;
+}
+
+.arraysubscription-dl-card-menu-button {
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: var(--arraysubscription-dl-color-text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    background: var(--arraysubscription-dl-color-bg-hover-alt);
+    color: var(--arraysubscription-dl-color-text-primary);
+  }
+
+  &:focus {
+    outline: 2px solid var(--arraysubscription-dl-color-primary);
+    outline-offset: 1px;
+  }
+}
+
+// Dropdown Menu
+.arraysubscription-dl-card-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: var(--arraysubscription-dl-color-bg-white);
+  border: 1px solid var(--arraysubscription-dl-color-border-medium);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px var(--arraysubscription-dl-shadow-strong);
+  min-width: 140px;
+  z-index: 100;
+  padding: 4px;
+  animation: arraysubscription-dl-menu-fade-in 0.15s ease;
+}
+
+@keyframes arraysubscription-dl-menu-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.arraysubscription-dl-card-menu-item {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--arraysubscription-dl-color-text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.4;
+  border-radius: 4px;
+  transition: background 0.1s ease;
+
+  &:hover {
+    background: var(--arraysubscription-dl-color-bg-hover-alt);
+  }
+
+  &:focus {
+    background: var(--arraysubscription-dl-color-bg-hover-alt);
+    outline: none;
+  }
+
+  &--danger {
+    color: var(--arraysubscription-dl-color-danger);
+
+    &:hover {
+      background: var(--arraysubscription-dl-color-danger);
+      color: var(--arraysubscription-dl-color-bg-white);
+    }
+  }
+}
+
+// Media Gallery
+.arraysubscription-dl-card-media {
+  margin-top: 12px;
+}
+
+// Empty State
+.arraysubscription-dl-empty-state {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--arraysubscription-dl-color-text-tertiary);
+  background: var(--arraysubscription-dl-color-bg-white);
+  border: 1px dashed var(--arraysubscription-dl-color-border-medium);
+  border-radius: 8px;
+  margin-top: 20px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}

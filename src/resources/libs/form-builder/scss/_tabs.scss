@@ -1,0 +1,54 @@
+// Tabs Layout Styles
+
+.arraysubscription-fb-tabs {
+  border: 1px solid var(--arraysubscription-fb-border-color);
+  border-radius: var(--arraysubscription-fb-border-radius);
+}
+
+.arraysubscription-fb-tabs-list {
+  display: flex;
+  border-bottom: 1px solid var(--arraysubscription-fb-border-color);
+  background-color: var(--arraysubscription-fb-bg-hover);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arraysubscription-fb-tabs-tab {
+  flex: 1;
+  padding: 12px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: var(--arraysubscription-fb-font-size);
+  font-weight: 500;
+  color: var(--arraysubscription-fb-text-muted);
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+
+  &:hover:not(.arraysubscription-fb-tabs-tab-active) {
+    background-color: var(--arraysubscription-fb-bg-color);
+    color: var(--arraysubscription-fb-text-color);
+  }
+
+  &.arraysubscription-fb-tabs-tab-active {
+    color: var(--arraysubscription-fb-primary-color);
+    border-bottom-color: var(--arraysubscription-fb-primary-color);
+    background-color: var(--arraysubscription-fb-bg-color);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.arraysubscription-fb-tabs-panel {
+  padding: var(--arraysubscription-fb-spacing-md);
+  display: none;
+
+  &.arraysubscription-fb-tabs-panel-active {
+    display: block;
+  }
+}

@@ -1,0 +1,50 @@
+// Slider/Range Input Styles
+
+.arraysubscription-fb-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--arraysubscription-fb-border-color);
+  outline: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--arraysubscription-fb-primary-color);
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--arraysubscription-fb-primary-color);
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.arraysubscription-fb-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--arraysubscription-fb-spacing-md);
+
+  .arraysubscription-fb-slider-value {
+    min-width: 40px;
+    text-align: right;
+    font-weight: 500;
+    font-size: var(--arraysubscription-fb-font-size);
+  }
+}

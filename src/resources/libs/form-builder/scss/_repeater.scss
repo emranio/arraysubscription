@@ -1,0 +1,66 @@
+// Repeater Field Styles
+
+.arraysubscription-fb-repeater {
+  .arraysubscription-fb-repeater-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--arraysubscription-fb-spacing-sm);
+    margin-bottom: var(--arraysubscription-fb-spacing-md);
+  }
+
+  .arraysubscription-fb-repeater-item {
+    border: 1px solid var(--arraysubscription-fb-border-color);
+    border-radius: var(--arraysubscription-fb-border-radius);
+    background-color: var(--arraysubscription-fb-bg-color);
+  }
+
+  .arraysubscription-fb-repeater-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--arraysubscription-fb-bg-hover);
+    }
+
+    &.arraysubscription-fb-repeater-item-open {
+      background-color: var(--arraysubscription-fb-bg-hover);
+    }
+  }
+
+  .arraysubscription-fb-repeater-item-title {
+    display: flex;
+    align-items: center;
+    gap: var(--arraysubscription-fb-spacing-sm);
+    font-weight: 500;
+    font-size: var(--arraysubscription-fb-font-size);
+  }
+
+  .arraysubscription-fb-repeater-drag-handle {
+    cursor: grab;
+    display: inline-flex;
+    color: var(--arraysubscription-fb-text-muted);
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .arraysubscription-fb-repeater-item-content {
+    padding: 12px;
+    border-top: 1px solid var(--arraysubscription-fb-border-color);
+    display: none;
+
+    &.arraysubscription-fb-repeater-item-open {
+      display: block;
+    }
+  }
+
+  .arraysubscription-fb-repeater-add-button {
+    width: 100%;
+  }
+}

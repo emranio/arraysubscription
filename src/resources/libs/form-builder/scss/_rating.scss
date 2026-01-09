@@ -1,0 +1,25 @@
+// Rating/Star Rating Styles
+
+.arraysubscription-fb-rating {
+  display: inline-flex;
+  gap: 4px;
+
+  .arraysubscription-fb-rating-star {
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--arraysubscription-fb-border-color);
+    transition: color 0.2s;
+
+    &.arraysubscription-fb-rating-star-filled {
+      color: #ffc107;
+    }
+
+    &:hover {
+      color: #ffb300;
+    }
+  }
+
+  &.arraysubscription-fb-rating-readonly .arraysubscription-fb-rating-star {
+    cursor: default;
+  }
+}

@@ -1,0 +1,15 @@
+// JSON Editor Styles
+
+.arraysubscription-fb-json-editor {
+  position: relative;
+
+  textarea {
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  &.arraysubscription-fb-json-error textarea {
+    border-color: var(--arraysubscription-fb-error-color);
+  }
+}

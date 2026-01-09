@@ -1,0 +1,54 @@
+// Base Field Container Styles
+
+.field-warper {
+  margin-bottom: var(--arraysubscription-fb-spacing-md);
+
+  &.field-item-inline {
+    display: flex;
+    align-items: center;
+    gap: var(--arraysubscription-fb-spacing-md);
+
+    .field-item-label {
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+
+    .field-item-field {
+      flex: 1;
+    }
+  }
+
+  &.field-item-block {
+    display: block;
+  }
+}
+
+.field-item-label {
+  display: block;
+  margin-bottom: var(--arraysubscription-fb-spacing-xs);
+  font-size: var(--arraysubscription-fb-label-font-size);
+  font-weight: 500;
+  color: var(--arraysubscription-fb-text-color);
+}
+
+.field-item-required {
+  color: var(--arraysubscription-fb-error-color);
+  margin-left: 2px;
+}
+
+.field-item-field {
+  position: relative;
+}
+
+.field-item-help {
+  display: block;
+  margin-top: var(--arraysubscription-fb-spacing-xs);
+  font-size: 12px;
+  color: var(--arraysubscription-fb-text-muted);
+}
+
+.field-error {
+  color: var(--arraysubscription-fb-error-color);
+  font-size: 12px;
+  margin-top: var(--arraysubscription-fb-spacing-xs);
+}

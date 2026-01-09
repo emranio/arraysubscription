@@ -1,0 +1,61 @@
+// Form Builder Core Styles
+// Modular SCSS - Lightweight without UI framework dependencies
+
+// Variables & Base Styles
+@import "variables";
+@import "field-base";
+
+// Basic Input Fields
+@import "input-fields";
+@import "password";
+
+// Selection Fields
+@import "checkbox-radio";
+@import "switch";
+
+// Advanced Fields
+@import "color";
+@import "slider";
+@import "rating";
+@import "file";
+@import "json";
+@import "tag";
+@import "multiselect";
+@import "select";
+
+// UI Components
+@import "button";
+@import "alert";
+@import "title";
+
+// Layout Components
+@import "tabs";
+@import "accordion";
+@import "grid";
+@import "card";
+@import "divider";
+@import "repeater";
+
+// form media upload field styles
+@import "media-upload";
+
+// Utility Classes
+.arraysubscription-fb-max-w-200 {
+  max-width: 200px !important;
+}
+
+.arraysubscription-fb-max-w-300 {
+  max-width: 300px !important;
+}
+
+.arraysubscription-fb-max-w-400 {
+  max-width: 400px !important;
+}
+
+.arraysubscription-fb-max-w-500 {
+  max-width: 500px !important;
+}
+
+.arraysubscription-fb-w-full {
+  width: 100% !important;
+}

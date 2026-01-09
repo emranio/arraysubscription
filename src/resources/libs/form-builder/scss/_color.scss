@@ -1,0 +1,28 @@
+// Color Picker Styles
+
+.arraysubscription-fb-color-input-wrapper {
+  display: flex;
+  gap: var(--arraysubscription-fb-spacing-sm);
+
+  input[type="color"] {
+    width: 50px;
+    height: var(--arraysubscription-fb-input-height);
+    padding: 2px;
+    border: 1px solid var(--arraysubscription-fb-border-color);
+    border-radius: var(--arraysubscription-fb-border-radius);
+    cursor: pointer;
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 2px;
+    }
+
+    &::-webkit-color-swatch {
+      border: none;
+      border-radius: 2px;
+    }
+  }
+
+  input[type="text"] {
+    flex: 1;
+  }
+}

@@ -1,0 +1,74 @@
+// design - Variables
+// Using WordPress admin color scheme as base
+
+$dark: #101010;
+$light: #e0e0e0;
+
+$chat-primary: #3858e9;
+$chat-primary-hover: #2845d6;
+$chat-secondary: #808080;
+$chat-secondary-hover: #6a6a6a;
+
+$chat-bg: #ffffff;
+$chat-surface: #f8f9fa;
+$chat-border: #dee2e6;
+$chat-text: $dark;
+$chat-text-muted: #949494;
+$chat-danger: #dc3545;
+$chat-danger-hover: #c82333;
+$chat-success: #28a745;
+
+// User message (right side)
+$user-message-bg: rgba($chat-primary, 1);
+$user-message-text: #ffffff;
+
+// AI message (left side)
+$ai-message-bg: $chat-surface;
+$ai-message-text: $chat-text;
+
+// app ui
+$sidebar-bg: $dark;
+$sidebar-text: $light;
+$sidebar-text-muted: $chat-text-muted;
+
+// Spacing
+$spacing-xxs: 2px;
+$spacing-xs: 5px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+$sidebar-spacing: 12px;
+
+// Border radius
+$radius-xs: 2px;
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 350ms ease;
+
+$transition-normal-cubic: 500ms cubic-bezier(0.17, 0.77, 0.34, 1);
+$transition-slow-cubic: 1000ms cubic-bezier(0.17, 0.77, 0.34, 1);
+
+// Z-index
+$z-chat-window: 99999;
+$z-history-sidebar: 100000;
+$z-header: 100001;
+
+// Window sizes
+$window-min-width: 380px;
+$window-min-height: 400px;
+$window-default-width: 400px;
+$window-default-height: 600px;
+$history-width: 280px;

@@ -1,0 +1,146 @@
+// Modal Variables
+$modal-backdrop-bg: rgba(0, 0, 0, 0.4);
+$modal-backdrop-blur: 2px;
+$modal-bg: #ffffff;
+$modal-border-radius: 12px;
+$modal-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+$modal-animation-duration: 200ms;
+$modal-animation-curve: cubic-bezier(0.16, 1, 0.3, 1); // Smooth ease-out
+
+// Size definitions
+$modal-sizes: (
+  sm: 400px,
+  md: 600px,
+  lg: 800px,
+  full: calc(100vw - 40px),
+);
+
+// Backdrop
+.arraysubscription-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: $modal-backdrop-bg;
+  backdrop-filter: blur($modal-backdrop-blur);
+  -webkit-backdrop-filter: blur($modal-backdrop-blur);
+
+  // Initial state (hidden)
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $modal-animation-duration ease-out,
+    visibility $modal-animation-duration ease-out;
+
+  // Visible state
+  &.arraysubscription-modal--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Modal container
+.arraysubscription-modal {
+  position: relative;
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  background: $modal-bg;
+  border-radius: $modal-border-radius;
+  box-shadow: $modal-shadow;
+  display: flex;
+  flex-direction: column;
+
+  // Initial state (scaled down slightly)
+  transform: scale(0.96) translateY(8px);
+  opacity: 0;
+  transition: transform $modal-animation-duration $modal-animation-curve,
+    opacity $modal-animation-duration ease-out;
+
+  // Visible state (grow in)
+  .arraysubscription-modal--visible & {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  // Sizes
+  @each $name, $width in $modal-sizes {
+    &--#{$name} {
+      max-width: $width;
+    }
+  }
+
+  &--full {
+    height: calc(100vh - 40px);
+    border-radius: 8px;
+  }
+}
+
+// Header
+.arraysubscription-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.arraysubscription-modal__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.arraysubscription-modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: -4px -8px -4px auto;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+
+  &:hover {
+    background: #f3f4f6;
+    color: #111827;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+}
+
+// Content
+.arraysubscription-modal__content {
+  padding: 16px;
+  padding-bottom: 0;
+  overflow-y: auto;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+// Footer
+.arraysubscription-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: none;
+  flex-shrink: 0;
+  background: transparent;
+  border-bottom-left-radius: $modal-border-radius;
+  border-bottom-right-radius: $modal-border-radius;
+}

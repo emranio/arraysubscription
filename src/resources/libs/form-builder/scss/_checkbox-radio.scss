@@ -1,0 +1,40 @@
+// Checkbox & Radio Button Styles
+
+.arraysubscription-fb-checkbox-group,
+.arraysubscription-fb-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--arraysubscription-fb-spacing-sm);
+
+  &.arraysubscription-fb-orientation-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.arraysubscription-fb-checkbox-item,
+.arraysubscription-fb-radio-item {
+  display: flex;
+  align-items: center;
+  gap: var(--arraysubscription-fb-spacing-sm);
+  cursor: pointer;
+
+  input {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: var(--arraysubscription-fb-font-size);
+    margin: 0;
+  }
+
+  &:hover {
+    input:not(:disabled) {
+      border-color: var(--arraysubscription-fb-primary-color);
+    }
+  }
+}

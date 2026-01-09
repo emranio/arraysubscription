@@ -1,0 +1,1 @@
+These are reusable and highly portable components acting as libs. all related codes, hooks, scss etc ar isolated within it's own dir, so that thay can easily ported to another project without any issues. Think them as npm packages

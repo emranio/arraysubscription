@@ -1,0 +1,38 @@
+// Basic Input Field Styles (Text, TextArea, Number, Select)
+
+.arraysubscription-fb-input,
+.arraysubscription-fb-textarea,
+.arraysubscription-fb-select {
+  width: 100%;
+  height: var(--arraysubscription-fb-input-height);
+  padding: var(--arraysubscription-fb-input-padding);
+  font-size: var(--arraysubscription-fb-font-size);
+  line-height: 1.5;
+  color: var(--arraysubscription-fb-text-color);
+  background-color: var(--arraysubscription-fb-bg-color);
+  border: 1px solid var(--arraysubscription-fb-border-color);
+  border-radius: var(--arraysubscription-fb-border-radius);
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--arraysubscription-fb-focus-color);
+    box-shadow: var(--arraysubscription-fb-focus-shadow);
+  }
+
+  &:disabled {
+    background-color: var(--arraysubscription-fb-disabled-bg);
+    color: var(--arraysubscription-fb-disabled-text);
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: var(--arraysubscription-fb-text-muted);
+  }
+}
+
+.arraysubscription-fb-textarea {
+  height: auto;
+  min-height: 80px;
+  resize: vertical;
+}

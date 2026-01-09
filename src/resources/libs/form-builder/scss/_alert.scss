@@ -1,0 +1,94 @@
+// Alert/Notice Styles
+
+.arraysubscription-alert {
+  position: relative;
+  padding: 12px 16px;
+  border-radius: var(--arraysubscription-fb-border-radius);
+  border: 1px solid;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: var(--arraysubscription-fb-spacing-md);
+
+  &-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  &-content {
+    flex: 1;
+  }
+
+  &-message {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  &-description {
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  &-close {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Alert types
+  &-info {
+    background-color: #e6f7ff;
+    border-color: #91d5ff;
+    color: #0050b3;
+
+    .arraysubscription-alert-icon {
+      color: #1890ff;
+    }
+  }
+
+  &-success {
+    background-color: #f6ffed;
+    border-color: #b7eb8f;
+    color: #135200;
+
+    .arraysubscription-alert-icon {
+      color: #52c41a;
+    }
+  }
+
+  &-warning {
+    background-color: #fffbe6;
+    border-color: #ffe58f;
+    color: #ad6800;
+
+    .arraysubscription-alert-icon {
+      color: #faad14;
+    }
+  }
+
+  &-error {
+    background-color: #fff2f0;
+    border-color: #ffccc7;
+    color: #a61d24;
+
+    .arraysubscription-alert-icon {
+      color: #ff4d4f;
+    }
+  }
+
+  &-with-icon {
+    padding-left: 16px;
+  }
+}

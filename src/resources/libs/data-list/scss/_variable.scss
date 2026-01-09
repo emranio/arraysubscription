@@ -1,0 +1,48 @@
+// ========================================
+// CSS Custom Properties for Data List
+// ========================================
+
+:root {
+  // Primary & Link Colors
+  --arraysubscription-dl-color-primary: #2271b1;
+  --arraysubscription-dl-color-primary-hover: #135e96;
+  --arraysubscription-dl-color-primary-dark: #0a4b78;
+  --arraysubscription-dl-color-link: #0073aa;
+
+  // Text Colors
+  --arraysubscription-dl-color-text-primary: #2c3338;
+  --arraysubscription-dl-color-text-secondary: #50575e;
+  --arraysubscription-dl-color-text-tertiary: #646970;
+  --arraysubscription-dl-color-text-muted: #666;
+  --arraysubscription-dl-color-text-dark: #1d2327;
+  --arraysubscription-dl-color-text-black: #000;
+
+  // Background Colors
+  --arraysubscription-dl-color-bg-white: #fff;
+  --arraysubscription-dl-color-bg-light: #f9f9f9;
+  --arraysubscription-dl-color-bg-lighter: #f5f5f5;
+  --arraysubscription-dl-color-bg-gray: #f6f7f7;
+  --arraysubscription-dl-color-bg-hover: #f0f0f0;
+  --arraysubscription-dl-color-bg-hover-alt: #f0f0f1;
+
+  // Border Colors
+  --arraysubscription-dl-color-border-light: #ddd;
+  --arraysubscription-dl-color-border-medium: #c3c4c7;
+  --arraysubscription-dl-color-border-dark: #8c8f94;
+  --arraysubscription-dl-color-border-darker: #999;
+  --arraysubscription-dl-color-border-divider: #e5e5e5;
+  --arraysubscription-dl-color-border-alpha: #6469706f;
+
+  // Danger/Error Colors
+  --arraysubscription-dl-color-danger: #d63638;
+  --arraysubscription-dl-color-danger-dark: #b32d2e;
+
+  // Disabled/Inactive Colors
+  --arraysubscription-dl-color-disabled: #a7aaad;
+
+  // Shadow Colors (rgba)
+  --arraysubscription-dl-shadow-subtle: rgba(0, 0, 0, 0.04);
+  --arraysubscription-dl-shadow-medium: rgba(0, 0, 0, 0.1);
+  --arraysubscription-dl-shadow-strong: rgba(0, 0, 0, 0.15);
+  --arraysubscription-dl-shadow-focus: rgba(0, 115, 170, 0.1);
+}

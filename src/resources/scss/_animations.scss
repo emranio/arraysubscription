@@ -1,0 +1,74 @@
+// The AI Chat - Animations
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// Spinner animation
+.arraysubscription-spinner {
+  animation: spin 1s linear infinite;
+}
+
+// Slide transitions
+.arraysubscription-slide-enter {
+  animation: slideInFromRight $transition-normal;
+}
+
+.arraysubscription-slide-exit {
+  animation: fadeOut $transition-fast;
+}

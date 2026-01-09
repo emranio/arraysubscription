@@ -1,0 +1,35 @@
+// File Input Styles
+
+.arraysubscription-fb-file-input-wrapper {
+  position: relative;
+
+  input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .arraysubscription-fb-file-input-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--arraysubscription-fb-spacing-sm);
+    padding: 8px 16px;
+    background-color: var(--arraysubscription-fb-bg-hover);
+    border: 1px solid var(--arraysubscription-fb-border-color);
+    border-radius: var(--arraysubscription-fb-border-radius);
+    cursor: pointer;
+    font-size: var(--arraysubscription-fb-font-size);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--arraysubscription-fb-border-color);
+    }
+  }
+
+  .arraysubscription-fb-file-input-name {
+    margin-top: var(--arraysubscription-fb-spacing-xs);
+    font-size: 13px;
+    color: var(--arraysubscription-fb-text-muted);
+  }
+}

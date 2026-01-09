@@ -1,0 +1,45 @@
+// Grid & Layout Styles
+
+// CSS Grid Component (12-column grid system)
+.arraysubscription-fb-grid {
+  display: grid;
+  gap: var(--arraysubscription-fb-spacing-md);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+// Container Component (Flexbox container - replaces deprecated Row/Col)
+.arraysubscription-fb-container {
+  display: flex;
+  gap: var(--arraysubscription-fb-spacing-md);
+}
+
+// Auto Grid Component (for GridSelect and general auto-fit layouts)
+.arraysubscription-fb-auto-grid {
+  display: grid;
+  gap: var(--arraysubscription-fb-spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+// GridSelect Component Styles
+.arraysubscription-fb-grid-select-item {
+  padding: 12px;
+  border: 2px solid var(--arraysubscription-fb-border-color);
+  border-radius: var(--arraysubscription-fb-border-radius);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--arraysubscription-fb-primary-color);
+    background-color: var(--arraysubscription-fb-bg-hover);
+  }
+
+  &.arraysubscription-fb-grid-select-item-selected {
+    border-color: var(--arraysubscription-fb-primary-color);
+    background-color: rgba(0, 115, 170, 0.1);
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+}
