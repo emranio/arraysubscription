@@ -108,7 +108,7 @@ class Hooks
         $menuItems = MenuConfig::getMenuItems();
         foreach ($menuItems as $item) {
             $path = $item['path'] ?? ($item['children'][0]['path'] ?? '/');
-            
+
             add_submenu_page(
                 $this->menu_slug,
                 esc_html($item['title']),
