@@ -25,10 +25,23 @@ const TopHeader = () => {
 
   return (
     <header className="arraysubscription-top-header">
-      {childItems.length > 0 && (
-        <nav>
-          <ul className="arraysubscription-tabs">
-            {childItems.map((item) => (
+      {/* Show tabs when there are children */}
+      <nav>
+        <ul className="arraysubscription-tabs">
+          {childItems.length === 0 && currentParent && (
+            <li className="arraysubscription-tab">
+              <a
+                aria-current="page"
+                className="arraysubscription-tab-link arraysubscription-tab-link--active"
+                href={`#${currentPath}`}
+                data-discover="true"
+              >
+                {currentParent.title}
+              </a>
+            </li>
+          )}
+          {childItems.length > 0 &&
+            childItems.map((item) => (
               <li key={item.id} className="arraysubscription-tab">
                 <NavLink
                   to={item.path}
@@ -42,9 +55,8 @@ const TopHeader = () => {
                 </NavLink>
               </li>
             ))}
-          </ul>
-        </nav>
-      )}
+        </ul>
+      </nav>
     </header>
   );
 };
