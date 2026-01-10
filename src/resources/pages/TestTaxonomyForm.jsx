@@ -174,15 +174,6 @@ const TestTaxonomyForm = () => {
   ];
 
   if (loading) {
-    const breadcrumb = [
-      { label: __("Taxonomies", "arraysubscription"), path: "/test-taxonomy" },
-      {
-        label: isEdit
-          ? __("Edit", "arraysubscription")
-          : __("Add New", "arraysubscription"),
-      },
-    ];
-
     return (
       <DefaultPageLayout
         title={
@@ -190,21 +181,11 @@ const TestTaxonomyForm = () => {
             ? __("Edit Test Taxonomy", "arraysubscription")
             : __("Add New Test Taxonomy", "arraysubscription")
         }
-        breadcrumb={breadcrumb}
       >
         <p>{__("Loading...", "arraysubscription")}</p>
       </DefaultPageLayout>
     );
   }
-
-  const breadcrumb = [
-    { label: __("Taxonomies", "arraysubscription"), path: "/test-taxonomy" },
-    {
-      label: isEdit
-        ? __("Edit", "arraysubscription")
-        : __("Add New", "arraysubscription"),
-    },
-  ];
 
   return (
     <DefaultPageLayout
@@ -213,7 +194,6 @@ const TestTaxonomyForm = () => {
           ? __("Edit Test Taxonomy", "arraysubscription")
           : __("Add New Test Taxonomy", "arraysubscription")
       }
-      breadcrumb={breadcrumb}
     >
       <Form
         form={form}

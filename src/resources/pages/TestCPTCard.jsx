@@ -12,16 +12,10 @@ import DefaultPageLayout from "@/components/DefaultPageLayout";
  * Card clicks navigate to edit form.
  */
 const TestCPTCard = () => {
-  const breadcrumb = [
-    { label: __("Post Types", "arraysubscription") },
-    { label: __("Card View", "arraysubscription") },
-  ];
-
   return (
     <DefaultPageLayout
       title={__("Post Types - Card View", "arraysubscription")}
       subtitle={__("Manage post types in card layout", "arraysubscription")}
-      breadcrumb={breadcrumb}
     >
       <DataList
         cptSlug="test_cpt"

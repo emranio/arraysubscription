@@ -10,11 +10,6 @@ import DefaultPageLayout from "@/components/DefaultPageLayout";
  * Displays all test taxonomies using DataList with TableView.
  */
 const TestTaxonomy = () => {
-  const breadcrumb = [
-    { label: __("Taxonomies", "arraysubscription") },
-    { label: __("Test Taxonomies", "arraysubscription") },
-  ];
-
   return (
     <DefaultPageLayout
       title={__("Test Taxonomies", "arraysubscription")}
@@ -22,7 +17,6 @@ const TestTaxonomy = () => {
         "Manage test taxonomies and their metadata",
         "arraysubscription"
       )}
-      breadcrumb={breadcrumb}
     >
       <DataList
         cptSlug="test_taxonomy"

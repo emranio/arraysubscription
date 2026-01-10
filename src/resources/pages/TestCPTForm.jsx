@@ -277,15 +277,6 @@ const TestCPTForm = () => {
   ];
 
   if (loading) {
-    const breadcrumb = [
-      { label: __("Post Types", "arraysubscription"), path: "/test-cpt/card" },
-      {
-        label: isEdit
-          ? __("Edit", "arraysubscription")
-          : __("Add New", "arraysubscription"),
-      },
-    ];
-
     return (
       <DefaultPageLayout
         title={
@@ -293,21 +284,11 @@ const TestCPTForm = () => {
             ? __("Edit Post Type", "arraysubscription")
             : __("Add New Post Type", "arraysubscription")
         }
-        breadcrumb={breadcrumb}
       >
         <p>{__("Loading...", "arraysubscription")}</p>
       </DefaultPageLayout>
     );
   }
-
-  const breadcrumb = [
-    { label: __("Post Types", "arraysubscription"), path: "/test-cpt/card" },
-    {
-      label: isEdit
-        ? __("Edit", "arraysubscription")
-        : __("Add New", "arraysubscription"),
-    },
-  ];
 
   return (
     <DefaultPageLayout
@@ -316,7 +297,6 @@ const TestCPTForm = () => {
           ? __("Edit Post Type", "arraysubscription")
           : __("Add New Post Type", "arraysubscription")
       }
-      breadcrumb={breadcrumb}
     >
       <Form
         form={form}

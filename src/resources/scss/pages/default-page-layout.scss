@@ -18,37 +18,6 @@
     gap: 12px;
   }
 
-  // Breadcrumb Navigation
-  .arraysubscription-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #1f2937;
-    flex-wrap: wrap;
-
-    &__link {
-      color: #6b7280;
-      text-decoration: none;
-      transition: color 0.2s;
-
-      &:hover {
-        color: #4f46e5;
-      }
-    }
-
-    &__current {
-      color: #1f2937;
-      font-weight: 600;
-    }
-
-    &__separator {
-      color: #9ca3af;
-      flex-shrink: 0;
-    }
-  }
-
   // Subtitle
   .arraysubscription-page-subtitle {
     margin: 0;
@@ -66,8 +35,6 @@
 // Responsive adjustments
 @media (max-width: 768px) {
   .arraysubscription-default-page-layout {
-    .arraysubscription-breadcrumb {
-      font-size: 16px;
-    }
+    // Add responsive styles if needed
   }
 }
