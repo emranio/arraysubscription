@@ -1,5 +1,8 @@
 import { NavLink, useLocation } from "react-router-dom";
-import menuItems from "../menu.js";
+import { __ } from "@wordpress/i18n";
+
+// Get menu items from PHP
+const menuItems = window.arraySubscription?.menu?.items || [];
 
 const TopHeader = () => {
   const location = useLocation();
@@ -20,17 +23,8 @@ const TopHeader = () => {
   // Get child items for current section (only if parent has children)
   const childItems = currentParent?.children || [];
 
-  // Get page title
-  const getPageTitle = () => {
-    if (currentParent) {
-      return currentParent.title;
-    }
-    return "Array Subscription";
-  };
-
   return (
     <header className="arraysubscription-top-header">
-      <h1>{getPageTitle()}</h1>
       {childItems.length > 0 && (
         <nav>
           <ul className="arraysubscription-tabs">
