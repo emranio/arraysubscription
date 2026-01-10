@@ -80,9 +80,13 @@ class Hooks
         );
 
         // Pass menu config to JavaScript
-        wp_localize_script('arraysubscription-mainadmin', 'arraySubscriptionMenu', [
-            'items' => MenuConfig::getMenuItems(),
-        ]);
+        wp_add_inline_script(
+            'arraysubscription-mainadmin',
+            'window.arraySubscription.menu = ' . wp_json_encode([
+                'items' => MenuConfig::getMenuItems(),
+            ]) . ';',
+            'before'
+        );
     }
 
     /**

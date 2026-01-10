@@ -20,7 +20,7 @@ import "./scss/main/index.scss";
 import { PageSkeleton } from "@libs/skeleton";
 
 // Get menu items from PHP
-const menuItems = window.arraySubscriptionMenu?.items || [];
+const menuItems = window.arraySubscription?.menu?.items || [];
 
 // Lazy load pages
 const Dashboard = lazy(() => import("./pages/Dashboard.jsx"));
