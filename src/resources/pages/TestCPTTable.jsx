@@ -2,7 +2,7 @@ import React from "react";
 import { __ } from "@wordpress/i18n";
 import DataList from "@libs/data-list";
 import Table from "@libs/data-list/TableView";
-import { buildUrl } from "../supports/url";
+import { buildUrl } from "../libs/url";
 import DefaultPageLayout from "@/components/DefaultPageLayout";
 
 /**

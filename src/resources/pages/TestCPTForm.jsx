@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { __ } from "@wordpress/i18n";
 import Form, { useForm } from "rc-field-form";
 import FormBuilder from "@libs/form-builder";
-import { buildUrl } from "@/supports/url";
+import { buildUrl } from "@/libs/url";
 import DefaultPageLayout from "@/components/DefaultPageLayout";
 
 const TestCPTForm = () => {

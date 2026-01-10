@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { buildUrl } from "../../../supports/url";
+import { buildUrl } from "../../url";
 
 const MediaGalleryCell = ({ value, restUrl, nonce }) => {
   const [mediaItems, setMediaItems] = useState([]);

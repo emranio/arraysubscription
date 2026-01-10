@@ -3,7 +3,7 @@ import { __ } from "@wordpress/i18n";
 import { ChevronDown, X, Search, Loader } from "lucide-react";
 import FieldBase from "../utils/FieldBase";
 import { filterInternalProps } from "../utils/filterInternalProps";
-import { buildUrl } from "../../../supports/url";
+import { buildUrl } from "../../url";
 
 /**
  * Unified Select Field - Single/Multi select with static/API data sources

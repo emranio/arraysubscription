@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { buildUrl } from "../../../supports/url";
+import { buildUrl } from "../../url";
 
 const FeaturedImageCell = ({ value, restUrl, nonce, size = "thumbnail" }) => {
   const [mediaItem, setMediaItem] = useState(null);

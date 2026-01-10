@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import TableView from "./TableView";
 import Pagination from "./components/Pagination";
 import MediaGalleryCell from "./components/MediaGalleryCell";
-import { buildUrl } from "../../supports/url";
+import { buildUrl } from "../url";
 import "./scss/data-list.scss";
 
 const DataList = ({

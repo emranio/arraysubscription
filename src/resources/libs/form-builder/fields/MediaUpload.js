@@ -16,7 +16,7 @@ import {
   rectSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { buildUrl } from "../../../supports/url";
+import { buildUrl } from "../../url";
 import { Loader2, PlusIcon, X } from "lucide-react";
 
 // Sortable thumbnail item
